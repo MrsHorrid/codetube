@@ -1,0 +1,197 @@
+export interface CreateTutorialInput {
+    title: string;
+    description?: string;
+    language: string;
+    framework?: string;
+    difficulty?: string;
+    tags?: string[];
+    isFree?: boolean;
+}
+export interface UpdateTutorialInput {
+    title?: string;
+    description?: string;
+    language?: string;
+    framework?: string;
+    difficulty?: string;
+    tags?: string[];
+    isFree?: boolean;
+    status?: string;
+}
+export declare const createTutorial: (creatorId: string, input: CreateTutorialInput) => Promise<{
+    id: string;
+    createdAt: Date;
+    updatedAt: Date;
+    deletedAt: Date | null;
+    title: string;
+    description: string | null;
+    slug: string;
+    language: string;
+    framework: string | null;
+    difficulty: string;
+    tags: string;
+    thumbnailUrl: string | null;
+    status: string;
+    isFree: boolean;
+    priceCents: number | null;
+    viewCount: number;
+    forkCount: number;
+    likeCount: number;
+    commentCount: number;
+    avgRating: number | null;
+    totalDurationSec: number | null;
+    publishedAt: Date | null;
+    creatorId: string;
+}>;
+export declare const getTutorialById: (id: string, userId?: string) => Promise<{
+    tags: string[];
+    viewerProgress: any;
+    recordings: {
+        id: string;
+        title: string;
+        partIndex: number;
+        durationSec: number;
+        isProcessed: boolean;
+    }[];
+    creator: {
+        id: string;
+        username: string;
+        displayName: string;
+        avatarUrl: string;
+        subscriberCount: number;
+    };
+    id: string;
+    createdAt: Date;
+    updatedAt: Date;
+    deletedAt: Date | null;
+    title: string;
+    description: string | null;
+    slug: string;
+    language: string;
+    framework: string | null;
+    difficulty: string;
+    thumbnailUrl: string | null;
+    status: string;
+    isFree: boolean;
+    priceCents: number | null;
+    viewCount: number;
+    forkCount: number;
+    likeCount: number;
+    commentCount: number;
+    avgRating: number | null;
+    totalDurationSec: number | null;
+    publishedAt: Date | null;
+    creatorId: string;
+}>;
+export declare const getTutorialBySlug: (slug: string, userId?: string) => Promise<{
+    tags: string[];
+    viewerProgress: any;
+    recordings: {
+        id: string;
+        title: string;
+        partIndex: number;
+        durationSec: number;
+        isProcessed: boolean;
+    }[];
+    creator: {
+        id: string;
+        username: string;
+        displayName: string;
+        avatarUrl: string;
+        subscriberCount: number;
+    };
+    id: string;
+    createdAt: Date;
+    updatedAt: Date;
+    deletedAt: Date | null;
+    title: string;
+    description: string | null;
+    slug: string;
+    language: string;
+    framework: string | null;
+    difficulty: string;
+    thumbnailUrl: string | null;
+    status: string;
+    isFree: boolean;
+    priceCents: number | null;
+    viewCount: number;
+    forkCount: number;
+    likeCount: number;
+    commentCount: number;
+    avgRating: number | null;
+    totalDurationSec: number | null;
+    publishedAt: Date | null;
+    creatorId: string;
+}>;
+export declare const updateTutorial: (id: string, creatorId: string, input: UpdateTutorialInput) => Promise<{
+    id: string;
+    createdAt: Date;
+    updatedAt: Date;
+    deletedAt: Date | null;
+    title: string;
+    description: string | null;
+    slug: string;
+    language: string;
+    framework: string | null;
+    difficulty: string;
+    tags: string;
+    thumbnailUrl: string | null;
+    status: string;
+    isFree: boolean;
+    priceCents: number | null;
+    viewCount: number;
+    forkCount: number;
+    likeCount: number;
+    commentCount: number;
+    avgRating: number | null;
+    totalDurationSec: number | null;
+    publishedAt: Date | null;
+    creatorId: string;
+}>;
+export declare const listTutorials: (options: {
+    language?: string;
+    difficulty?: string;
+    tag?: string;
+    status?: string;
+    sort?: string;
+    page?: number;
+    limit?: number;
+}) => Promise<{
+    tutorials: {
+        tags: string[];
+        creator: {
+            id: string;
+            username: string;
+            displayName: string;
+            avatarUrl: string;
+        };
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        deletedAt: Date | null;
+        title: string;
+        description: string | null;
+        slug: string;
+        language: string;
+        framework: string | null;
+        difficulty: string;
+        thumbnailUrl: string | null;
+        status: string;
+        isFree: boolean;
+        priceCents: number | null;
+        viewCount: number;
+        forkCount: number;
+        likeCount: number;
+        commentCount: number;
+        avgRating: number | null;
+        totalDurationSec: number | null;
+        publishedAt: Date | null;
+        creatorId: string;
+    }[];
+    pagination: {
+        page: number;
+        limit: number;
+        total: number;
+        hasNext: boolean;
+    };
+}>;
+//# sourceMappingURL=tutorialService.d.ts.map

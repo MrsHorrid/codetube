@@ -1,0 +1,412 @@
+/* ─── Reset & Base ──────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg-deep:    #0f0f1a;
+  --bg-panel:   #1a1a2e;
+  --bg-surface: #16213e;
+  --bg-hover:   #0f3460;
+  --accent:     #00d2ff;
+  --accent2:    #7b2fff;
+  --text:       #e2e8f0;
+  --text-muted: #64748b;
+  --border:     #2a2a4a;
+  --success:    #10b981;
+  --warning:    #f59e0b;
+  --danger:     #ef4444;
+  --radius:     8px;
+  --transition: 150ms ease;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg-deep);
+  color: var(--text);
+  height: 100vh;
+  overflow: hidden;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+  font: inherit;
+}
+
+/* ─── App Layout ─────────────────────────────────────────────────────────── */
+#root { height: 100vh; display: flex; flex-direction: column; }
+
+.app-root { height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
+
+/* ─── CodeTube Container ─────────────────────────────────────────────────── */
+.ct-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: var(--bg-panel);
+  overflow: hidden;
+}
+
+/* ─── Header ─────────────────────────────────────────────────────────────── */
+.ct-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+  gap: 16px;
+}
+
+.ct-header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+}
+
+.ct-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.ct-logo-icon {
+  font-size: 18px;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.ct-logo-text {
+  font-size: 16px;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.ct-title-info { min-width: 0; }
+
+.ct-title {
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ct-instructor { font-size: 11px; color: var(--text-muted); }
+
+.ct-header-right { flex-shrink: 0; }
+
+/* ─── Mode Switcher ──────────────────────────────────────────────────────── */
+.ct-mode-switcher {
+  display: flex;
+  background: var(--bg-deep);
+  border-radius: var(--radius);
+  padding: 3px;
+  gap: 2px;
+}
+
+.ct-mode-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: all var(--transition);
+  position: relative;
+}
+
+.ct-mode-btn:hover { color: var(--text); background: var(--bg-hover); }
+
+.ct-mode-btn.active {
+  background: var(--bg-hover);
+  color: var(--accent);
+}
+
+.ct-live-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--success);
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+}
+
+/* ─── Editor Wrapper ─────────────────────────────────────────────────────── */
+.ct-editor-wrapper {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.ct-following-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  cursor: default;
+  /* Subtle gradient overlay showing it's locked */
+  background: linear-gradient(
+    to bottom,
+    rgba(0,210,255,0.02) 0%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+/* ─── Checkpoint Toast ───────────────────────────────────────────────────── */
+.ct-checkpoint-toast {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  background: var(--bg-surface);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 8px 16px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 20;
+  animation: slideIn 0.2s ease;
+  box-shadow: 0 4px 24px rgba(0,210,255,0.2);
+}
+
+.ct-checkpoint-toast-dot { color: var(--accent); font-size: 8px; }
+
+@keyframes slideIn {
+  from { transform: translateX(20px); opacity: 0; }
+  to   { transform: translateX(0);    opacity: 1; }
+}
+
+/* ─── Playback Controls ──────────────────────────────────────────────────── */
+.ct-controls {
+  padding: 12px 20px;
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.ct-timeline { margin-bottom: 10px; }
+
+.ct-track {
+  position: relative;
+  height: 6px;
+  background: var(--bg-deep);
+  border-radius: 3px;
+  margin-bottom: 4px;
+}
+
+.ct-progress {
+  position: absolute;
+  left: 0; top: 0;
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent2), var(--accent));
+  border-radius: 3px;
+  pointer-events: none;
+  transition: width 0.1s linear;
+}
+
+.ct-checkpoint-dot {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--warning);
+  border: 2px solid var(--bg-surface);
+  z-index: 2;
+  transition: transform var(--transition);
+}
+
+.ct-checkpoint-dot:hover { transform: translate(-50%, -50%) scale(1.4); }
+
+.ct-scrubber {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.ct-times {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.ct-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.ct-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius);
+  background: var(--bg-deep);
+  color: var(--text-muted);
+  transition: all var(--transition);
+}
+
+.ct-btn:hover { background: var(--bg-hover); color: var(--text); }
+
+.ct-btn--play {
+  width: 42px;
+  height: 42px;
+  background: linear-gradient(135deg, var(--accent2), var(--accent));
+  color: white;
+  border-radius: 50%;
+}
+
+.ct-btn--play:hover { opacity: 0.9; transform: scale(1.05); }
+
+.ct-speed {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 8px;
+  padding: 5px 10px;
+  background: var(--bg-deep);
+  border-radius: var(--radius);
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.ct-speed-select {
+  background: transparent;
+  border: none;
+  color: var(--text);
+  font-size: 12px;
+  cursor: pointer;
+  outline: none;
+}
+
+.ct-complete-badge {
+  font-size: 11px;
+  padding: 3px 10px;
+  background: var(--success);
+  color: white;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+/* ─── Status Bar ─────────────────────────────────────────────────────────── */
+.ct-statusbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 20px;
+  background: linear-gradient(135deg, var(--accent2) 0%, #1a1a4e 50%, var(--bg-deep) 100%);
+  font-size: 11px;
+  flex-shrink: 0;
+}
+
+.ct-statusbar-left, .ct-statusbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ct-mode-badge {
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-weight: 600;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ct-mode-badge--following { background: var(--success); color: white; }
+.ct-mode-badge--exploring { background: var(--warning); color: #1a1a2e; }
+.ct-mode-badge--editing   { background: var(--accent2); color: white; }
+
+.ct-follow-btn {
+  font-size: 11px;
+  padding: 2px 8px;
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  color: var(--accent);
+  transition: all var(--transition);
+}
+
+.ct-follow-btn:hover { background: var(--accent); color: var(--bg-deep); }
+
+/* ─── Demo/Home Page ─────────────────────────────────────────────────────── */
+.demo-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-deep);
+}
+
+.demo-hero {
+  text-align: center;
+  padding: 60px 20px 40px;
+}
+
+.demo-hero h1 {
+  font-size: 48px;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 12px;
+}
+
+.demo-hero p {
+  color: var(--text-muted);
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto 32px;
+}
+
+.demo-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  background: linear-gradient(135deg, var(--accent2), var(--accent));
+  color: white;
+  border-radius: 40px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all var(--transition);
+  box-shadow: 0 8px 32px rgba(0,210,255,0.3);
+}
+
+.demo-cta:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(0,210,255,0.4); }
+
+/* ─── Scrollbar ──────────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-deep); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }

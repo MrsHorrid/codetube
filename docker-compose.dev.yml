@@ -1,0 +1,95 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:15-alpine
+    container_name: codetube-postgres-dev
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: codetube
+      POSTGRES_PASSWORD: devpassword
+      POSTGRES_DB: codetube
+    volumes:
+      - postgres_dev_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U codetube -d codetube"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - codetube-dev-network
+
+  # Redis Cache
+  redis:
+    image: redis:7-alpine
+    container_name: codetube-redis-dev
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - codetube-dev-network
+
+  # Backend API (development mode with hot reload)
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.dev
+    container_name: codetube-backend-dev
+    restart: unless-stopped
+    environment:
+      NODE_ENV: development
+      PORT: 3000
+      DATABASE_URL: postgresql://codetube:devpassword@postgres:5432/codetube?schema=public
+      REDIS_URL: redis://redis:6379
+      JWT_SECRET: dev-jwt-secret-change-in-production
+      JWT_REFRESH_SECRET: dev-refresh-secret-change-in-production
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+      - backend_dev_uploads:/app/uploads
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      - codetube-dev-network
+    command: npm run dev
+
+  # Frontend (development mode with hot reload)
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.dev
+    container_name: codetube-frontend-dev
+    restart: unless-stopped
+    environment:
+      VITE_API_URL: http://localhost:3000
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+    networks:
+      - codetube-dev-network
+    command: npm run dev -- --host
+
+volumes:
+  postgres_dev_data:
+  backend_dev_uploads:
+
+networks:
+  codetube-dev-network:
+    driver: bridge

@@ -1,0 +1,349 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// Models
+model User {
+  id              String   @id @default(uuid())
+  username        String   @unique
+  email           String   @unique
+  passwordHash    String   @map("password_hash")
+  displayName     String?  @map("display_name")
+  avatarUrl       String?  @map("avatar_url")
+  bio             String?
+  isCreator       Boolean  @default(false) @map("is_creator")
+  isVerified      Boolean  @default(false) @map("is_verified")
+  isAdmin         Boolean  @default(false) @map("is_admin")
+
+  // Creator-specific
+  creatorSlug     String?  @unique @map("creator_slug")
+  websiteUrl      String?  @map("website_url")
+  githubUsername  String?  @map("github_username")
+  twitterHandle   String?  @map("twitter_handle")
+
+  // Stats (denormalized for perf)
+  subscriberCount Int      @default(0) @map("subscriber_count")
+  tutorialCount   Int      @default(0) @map("tutorial_count")
+
+  // Metadata
+  lastLoginAt     DateTime? @map("last_login_at")
+  createdAt       DateTime  @default(now()) @map("created_at")
+  updatedAt       DateTime  @default(now()) @updatedAt @map("updated_at")
+  deletedAt       DateTime? @map("deleted_at")
+
+  // Relations
+  tutorials       Tutorial[]
+  recordings      Recording[]
+  viewerProgress  ViewerProgress[]
+  viewerForks     ViewerFork[]
+  comments        Comment[]
+  subscriptions   Subscription[]  @relation("Subscriber")
+  subscribers     Subscription[]  @relation("Creator")
+  tutorialLikes   TutorialLike[]
+  commentLikes    CommentLike[]
+  notifications   Notification[]
+
+  @@index([username])
+  @@index([email])
+  @@index([isCreator])
+  @@map("users")
+}
+
+model Tutorial {
+  id              String   @id @default(uuid())
+  creatorId       String   @map("creator_id")
+  creator         User     @relation(fields: [creatorId], references: [id], onDelete: Cascade)
+
+  // Content metadata
+  title           String
+  slug            String   @unique
+  description     String?
+  language        String
+  framework       String?
+  difficulty      String   @default("intermediate")
+  tags            String   @default("")
+  thumbnailUrl    String?  @map("thumbnail_url")
+
+  // Status & visibility
+  status          String   @default("draft")
+  isFree          Boolean  @default(true) @map("is_free")
+  priceCents      Int?     @map("price_cents")
+
+  // Stats (denormalized)
+  viewCount       Int      @default(0) @map("view_count")
+  forkCount       Int      @default(0) @map("fork_count")
+  likeCount       Int      @default(0) @map("like_count")
+  commentCount    Int      @default(0) @map("comment_count")
+  avgRating       Float?   @map("avg_rating")
+
+  // Duration in seconds
+  totalDurationSec Int?    @map("total_duration_sec")
+
+  publishedAt     DateTime? @map("published_at")
+  createdAt       DateTime  @default(now()) @map("created_at")
+  updatedAt       DateTime  @default(now()) @updatedAt @map("updated_at")
+  deletedAt       DateTime? @map("deleted_at")
+
+  // Relations
+  recordings      Recording[]
+  checkpoints     Checkpoint[]
+  viewerProgress  ViewerProgress[]
+  viewerForks     ViewerFork[]
+  comments        Comment[]
+  likes           TutorialLike[]
+
+  @@index([creatorId])
+  @@index([language])
+  @@index([difficulty])
+  @@index([status])
+  @@index([slug])
+  @@map("tutorials")
+}
+
+model Recording {
+  id              String   @id @default(uuid())
+  tutorialId      String   @map("tutorial_id")
+  tutorial        Tutorial @relation(fields: [tutorialId], references: [id], onDelete: Cascade)
+  creatorId       String   @map("creator_id")
+  creator         User     @relation(fields: [creatorId], references: [id])
+
+  // Ordering within a tutorial
+  partIndex       Int      @default(0) @map("part_index")
+  title           String?
+
+  // Blob reference
+  storageKey      String   @unique @map("storage_key")
+  storageBucket   String   @map("storage_bucket")
+  sizeBytes       Int      @map("size_bytes")
+  checksumSha256  String   @map("checksum_sha256")
+  compression     String   @default("gzip")
+  encoding        String   @default("json")
+
+  // Playback metadata
+  durationSec     Int      @map("duration_sec")
+  eventCount      Int      @map("event_count")
+  editor          String?
+  terminalCols    Int?     @map("terminal_cols")
+  terminalRows    Int?     @map("terminal_rows")
+
+  // Processing state
+  isProcessed     Boolean  @default(false) @map("is_processed")
+  processingError String?  @map("processing_error")
+
+  createdAt       DateTime @default(now()) @map("created_at")
+  updatedAt       DateTime @default(now()) @updatedAt @map("updated_at")
+
+  // Relations
+  checkpoints     Checkpoint[]
+  viewerProgress  ViewerProgress[]
+
+  @@index([tutorialId, partIndex])
+  @@index([creatorId])
+  @@map("recordings")
+}
+
+model Checkpoint {
+  id                String     @id @default(uuid())
+  recordingId       String     @map("recording_id")
+  recording         Recording  @relation(fields: [recordingId], references: [id], onDelete: Cascade)
+  tutorialId        String     @map("tutorial_id")
+  tutorial          Tutorial   @relation(fields: [tutorialId], references: [id], onDelete: Cascade)
+
+  // Position in the recording
+  timestampMs       Int        @map("timestamp_ms")
+  eventIndex        Int        @map("event_index")
+
+  label             String
+  description       String?
+  isAuto            Boolean    @default(false) @map("is_auto")
+
+  // Snapshot of editor state
+  stateSnapshot     String     @default("{}") @map("state_snapshot")
+  fileSnapshotKey   String?    @map("file_snapshot_key")
+
+  createdAt         DateTime   @default(now()) @map("created_at")
+
+  // Relations
+  viewerForks       ViewerFork[]
+
+  @@index([recordingId, timestampMs])
+  @@index([tutorialId])
+  @@map("checkpoints")
+}
+
+model ViewerProgress {
+  id                String      @id @default(uuid())
+  userId            String      @map("user_id")
+  user              User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  tutorialId        String      @map("tutorial_id")
+  tutorial          Tutorial    @relation(fields: [tutorialId], references: [id], onDelete: Cascade)
+
+  // Last watched position
+  recordingId       String?     @map("recording_id")
+  recording         Recording?  @relation(fields: [recordingId], references: [id])
+  timestampMs       Int         @default(0) @map("timestamp_ms")
+  eventIndex        Int         @default(0) @map("event_index")
+  lastCheckpointId  String?     @map("last_checkpoint_id")
+
+  // Completion
+  isCompleted       Boolean     @default(false) @map("is_completed")
+  completedAt       DateTime?   @map("completed_at")
+  watchTimeSec      Int         @default(0) @map("watch_time_sec")
+
+  // Playback preferences
+  playbackSpeed     Float       @default(1.0) @map("playback_speed")
+
+  createdAt         DateTime    @default(now()) @map("created_at")
+  updatedAt         DateTime    @default(now()) @updatedAt @map("updated_at")
+
+  @@unique([userId, tutorialId])
+  @@index([userId])
+  @@index([tutorialId])
+  @@map("viewer_progress")
+}
+
+model ViewerFork {
+  id                String     @id @default(uuid())
+  userId            String     @map("user_id")
+  user              User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  tutorialId        String     @map("tutorial_id")
+  tutorial          Tutorial   @relation(fields: [tutorialId], references: [id], onDelete: Cascade)
+  checkpointId      String?    @map("checkpoint_id")
+  checkpoint        Checkpoint? @relation(fields: [checkpointId], references: [id])
+
+  // Name / description
+  name              String     @default("My Fork")
+  notes             String?
+  status            String     @default("active")
+
+  // The actual forked file state
+  storageKey        String     @unique @map("storage_key")
+  storageBucket     String     @map("storage_bucket")
+  sizeBytes         Int        @default(0) @map("size_bytes")
+
+  // Optional: user's own keystroke recording on top of fork
+  userRecordingKey  String?    @map("user_recording_key")
+
+  // Sharing
+  isPublic          Boolean    @default(false) @map("is_public")
+  shareToken        String?    @unique @map("share_token")
+
+  createdAt         DateTime   @default(now()) @map("created_at")
+  updatedAt         DateTime   @default(now()) @updatedAt @map("updated_at")
+
+  @@index([userId])
+  @@index([tutorialId])
+  @@index([shareToken])
+  @@map("viewer_forks")
+}
+
+model Comment {
+  id              String      @id @default(uuid())
+  tutorialId      String      @map("tutorial_id")
+  tutorial        Tutorial    @relation(fields: [tutorialId], references: [id], onDelete: Cascade)
+  authorId        String      @map("author_id")
+  author          User        @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  parentId        String?     @map("parent_id")
+  parent          Comment?    @relation("CommentReplies", fields: [parentId], references: [id], onDelete: Cascade)
+
+  type            String      @default("comment")
+  body            String
+
+  // For reviews only
+  rating          Int?
+
+  // Timestamp anchor
+  timestampMs     Int?        @map("timestamp_ms")
+  recordingId     String?     @map("recording_id")
+
+  // Moderation
+  isPinned        Boolean     @default(false) @map("is_pinned")
+  isHidden        Boolean     @default(false) @map("is_hidden")
+  likeCount       Int         @default(0) @map("like_count")
+
+  createdAt       DateTime    @default(now()) @map("created_at")
+  updatedAt       DateTime    @default(now()) @updatedAt @map("updated_at")
+  deletedAt       DateTime?   @map("deleted_at")
+
+  // Relations
+  replies         Comment[]   @relation("CommentReplies")
+  likes           CommentLike[]
+
+  @@index([tutorialId, createdAt])
+  @@index([parentId])
+  @@index([authorId])
+  @@index([tutorialId, timestampMs])
+  @@map("comments")
+}
+
+model Subscription {
+  id                  String   @id @default(uuid())
+  subscriberId        String   @map("subscriber_id")
+  subscriber          User     @relation("Subscriber", fields: [subscriberId], references: [id], onDelete: Cascade)
+  creatorId           String   @map("creator_id")
+  creator             User     @relation("Creator", fields: [creatorId], references: [id], onDelete: Cascade)
+
+  notifyNewTutorial   Boolean  @default(true) @map("notify_new_tutorial")
+  notifyComments      Boolean  @default(false) @map("notify_comments")
+
+  createdAt           DateTime @default(now()) @map("created_at")
+
+  @@unique([subscriberId, creatorId])
+  @@index([subscriberId])
+  @@index([creatorId])
+  @@map("subscriptions")
+}
+
+model TutorialLike {
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  tutorialId  String   @map("tutorial_id")
+  tutorial    Tutorial @relation(fields: [tutorialId], references: [id], onDelete: Cascade)
+  createdAt   DateTime @default(now()) @map("created_at")
+
+  @@id([userId, tutorialId])
+  @@map("tutorial_likes")
+}
+
+model CommentLike {
+  userId     String
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  commentId  String   @map("comment_id")
+  comment    Comment  @relation(fields: [commentId], references: [id], onDelete: Cascade)
+  createdAt  DateTime @default(now()) @map("created_at")
+
+  @@id([userId, commentId])
+  @@map("comment_likes")
+}
+
+model Notification {
+  id          String   @id @default(uuid())
+  userId      String   @map("user_id")
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  type        String
+  payload     String   @default("{}")
+  isRead      Boolean  @default(false) @map("is_read")
+  createdAt   DateTime @default(now()) @map("created_at")
+
+  @@index([userId, isRead, createdAt])
+  @@map("notifications")
+}
+
+model AnalyticsEvent {
+  id          Int      @id @default(autoincrement())
+  eventType   String   @map("event_type")
+  tutorialId  String?  @map("tutorial_id")
+  userId      String?  @map("user_id")
+  sessionId   String?  @map("session_id")
+  payload     String   @default("{}")
+  occurredAt  DateTime @default(now()) @map("occurred_at")
+
+  @@index([tutorialId, occurredAt])
+  @@index([eventType, occurredAt])
+  @@map("analytics_events")
+}

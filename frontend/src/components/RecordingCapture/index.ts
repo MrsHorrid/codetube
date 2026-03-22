@@ -1,0 +1,1 @@
+export { RecordingCapture } from './RecordingCapture';

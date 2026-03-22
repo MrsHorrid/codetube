@@ -1,0 +1,26 @@
+# Development Dockerfile for Backend (with hot reload)
+FROM node:20-alpine
+
+WORKDIR /app
+
+# Install dependencies for development
+RUN apk add --no-cache python3 make g++
+
+# Copy package files
+COPY package*.json ./
+COPY prisma ./prisma/
+
+# Install all dependencies (including devDependencies)
+RUN npm install
+
+# Generate Prisma client
+RUN npx prisma generate
+
+# Don't copy source code - will be mounted as volume
+# Don't build - will be handled by nodemon
+
+# Expose port
+EXPOSE 3000
+
+# Development command
+CMD ["npm", "run", "dev"]
