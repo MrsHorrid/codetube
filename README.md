@@ -16,6 +16,13 @@
 </p>
 
 <p align="center">
+  <strong>🚀 One-Click Deploy</strong><br>
+  <a href="https://railway.app/template/your-template-id"><img src="https://railway.app/button.svg" alt="Deploy on Railway" height="30"></a>
+  <a href="https://render.com/deploy?repo=https://github.com/yourusername/codetube"><img src="https://render.com/images/deploy-to-render-button.svg" alt="Deploy to Render" height="30"></a>
+  <a href="https://vercel.com/new/clone?repository-url=https://github.com/yourusername/codetube"><img src="https://vercel.com/button" alt="Deploy with Vercel" height="30"></a>
+</p>
+
+<p align="center">
   <a href="#-demo">Demo</a> •
   <a href="#-features">Features</a> •
   <a href="#-quick-start">Quick Start</a> •
@@ -55,7 +62,30 @@
 
 ## 🚀 Quick Start
 
-Get CodeTube running locally in 3 simple commands:
+### Option 1: One-Click Deploy (Production in 2 minutes)
+
+Deploy to your preferred platform:
+
+| Platform | Button |
+|----------|--------|
+| **Railway** | [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/your-template-id) |
+| **Render** | [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/yourusername/codetube) |
+| **Vercel** | [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/codetube) |
+
+### Option 2: Docker (Local Development)
+
+```bash
+# Clone and start with Docker
+git clone https://github.com/yourusername/codetube.git && cd codetube
+
+# Start all services
+docker-compose up -d
+
+# Run database migrations
+docker-compose exec backend npx prisma migrate dev
+```
+
+### Option 3: Manual Setup
 
 ```bash
 # 1. Clone the repository
@@ -70,7 +100,7 @@ cd ../frontend && npm install && npm run dev
 
 That's it! 🎉 Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-> 📖 **[Complete Deployment Guide](docs/DEPLOYMENT.md)** for production setup on Vercel/Railway
+> 📖 **[Complete Deployment Guide](docs/PRODUCTION.md)** for detailed production setup instructions
 
 ---
 

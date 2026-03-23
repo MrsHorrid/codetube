@@ -1,0 +1,30 @@
+{
+  "name": "codetube",
+  "version": 2,
+  "builds": [
+    {
+      "src": "backend/Dockerfile",
+      "use": "@vercel/docker"
+    },
+    {
+      "src": "frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "http://codetube-backend:3000/api/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/frontend/$1"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  }
+}
