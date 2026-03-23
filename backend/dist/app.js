@@ -41,6 +41,7 @@ const cors_1 = __importDefault(require("cors"));
 const helmet_1 = __importDefault(require("helmet"));
 const morgan_1 = __importDefault(require("morgan"));
 const dotenv_1 = __importDefault(require("dotenv"));
+const fs_1 = __importDefault(require("fs"));
 dotenv_1.default.config();
 const validation_1 = require("./middleware/validation");
 // Routes
@@ -49,19 +50,50 @@ const tutorials_1 = __importDefault(require("./routes/tutorials"));
 const recordings_1 = __importDefault(require("./routes/recordings"));
 const progress_1 = __importDefault(require("./routes/progress"));
 const forks_1 = __importStar(require("./routes/forks"));
+const generate_1 = __importDefault(require("./routes/generate"));
 const app = (0, express_1.default)();
 // Middleware
 app.use((0, helmet_1.default)());
-app.use((0, cors_1.default)());
-app.use((0, morgan_1.default)('dev'));
+// CORS - configurable via CORS_ORIGIN env var (comma-separated origins, or '*' for all)
+const corsOrigin = process.env.CORS_ORIGIN;
+const corsOptions = corsOrigin
+    ? {
+        origin: corsOrigin === '*' ? '*' : corsOrigin.split(',').map((o) => o.trim()),
+        credentials: corsOrigin !== '*',
+    }
+    : { origin: true, credentials: true };
+app.use((0, cors_1.default)(corsOptions));
+app.use((0, morgan_1.default)(process.env.NODE_ENV === 'production' ? 'combined' : 'dev'));
 app.use(express_1.default.json({ limit: '10mb' }));
 app.use(express_1.default.urlencoded({ extended: true }));
 // Health check
+const { version } = require('../package.json');
 app.get('/health', (_req, res) => {
-    res.json({ status: 'ok', timestamp: new Date().toISOString() });
+    res.json({ status: 'ok', version, timestamp: new Date().toISOString() });
+});
+// ─── Audio File Serving ───────────────────────────────────────
+// Serves generated (and mock) audio files from AUDIO_STORAGE_DIR.
+// In production, offload this to a CDN / object storage.
+const audioStorageDir = process.env.AUDIO_STORAGE_DIR || '/tmp/codetube-audio';
+// Ensure the directory exists on startup
+if (!fs_1.default.existsSync(audioStorageDir)) {
+    fs_1.default.mkdirSync(audioStorageDir, { recursive: true });
+}
+app.use('/api/audio', express_1.default.static(audioStorageDir, { maxAge: '1h' }));
+// Mock audio endpoint: returns a silent 1s MP3 for any mock URL
+// so the frontend never hard-errors when Fish Audio is not configured.
+app.get('/api/audio/mock/:persona/:filename', (_req, res) => {
+    // Tiny valid MP3 (1 frame of silence at 128kbps)
+    // This is a minimal valid MP3 header so audio elements don't error.
+    const silentMp3 = Buffer.from('fffb9000000000000000000000000000000000000000000000000000000000000000' +
+        '000000000000000000000000000000000000000000000000000000000000000000000000', 'hex');
+    res.setHeader('Content-Type', 'audio/mpeg');
+    res.setHeader('Cache-Control', 'public, max-age=86400');
+    res.send(silentMp3);
 });
 // API Routes
 app.use('/api/auth', auth_1.default);
+app.use('/api/generate-course', generate_1.default);
 app.use('/api/tutorials', tutorials_1.default);
 app.use('/api/tutorials', forks_1.default); // POST /api/tutorials/:id/forks
 app.use('/api/tutorials', progress_1.default); // PUT /api/tutorials/:id/progress

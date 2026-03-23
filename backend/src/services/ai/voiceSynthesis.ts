@@ -146,10 +146,12 @@ export async function synthesizeNarration(
   lessonId: string
 ): Promise<SynthesizedAudio[]> {
   const results: SynthesizedAudio[] = [];
+  // Use the same storage dir the client is configured with
+  const storageDir = process.env.AUDIO_STORAGE_DIR || '/tmp/codetube-audio';
 
   for (let i = 0; i < segments.length; i++) {
     const seg = segments[i];
-    const outputPath = `/tmp/codetube-audio/${lessonId}/segment-${i}.mp3`;
+    const outputPath = `${storageDir}/${lessonId}/segment-${i}.mp3`;
 
     try {
       const { url, durationMs } = await fishClient.synthesize(seg.text, persona, outputPath);
@@ -162,10 +164,13 @@ export async function synthesizeNarration(
       });
     } catch (err) {
       console.error(`Failed to synthesize segment ${i} for lesson ${lessonId}:`, err);
-      // Fallback: use placeholder
+      // Fallback: return a mock-style URL with duration estimate so playback can continue
+      const wordCount = seg.text.split(/\s+/).length;
+      const durationMs = Math.max((wordCount / 150) * 60 * 1000, 1000);
+      const hash = Buffer.from(seg.text.slice(0, 32)).toString('base64url').slice(0, 8);
       results.push({
-        url: `/api/audio/error-fallback-${i}.mp3`,
-        durationMs: 5000,
+        url: `/api/audio/mock/${persona}/${hash}-fallback.mp3`,
+        durationMs,
         text: seg.text,
         persona,
         segmentIndex: i,

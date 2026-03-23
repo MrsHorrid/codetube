@@ -49,12 +49,20 @@ services:
     environment:
       NODE_ENV: production
       PORT: 3000
-      DATABASE_URL: ${DATABASE_URL:-postgresql://${POSTGRES_USER:-codetube}:${POSTGRES_PASSWORD:-changeme}@postgres:5432/${POSTGRES_DB:-codetube}?schema=public}
+      # DATABASE_URL must be set in .env or via environment – nested interpolation not supported
+      DATABASE_URL: ${DATABASE_URL}
       REDIS_URL: ${REDIS_URL:-redis://redis:6379}
       JWT_SECRET: ${JWT_SECRET}
       JWT_REFRESH_SECRET: ${JWT_REFRESH_SECRET}
       JWT_EXPIRES_IN: ${JWT_EXPIRES_IN:-1h}
       JWT_REFRESH_EXPIRES_IN: ${JWT_REFRESH_EXPIRES_IN:-7d}
+      CORS_ORIGIN: ${CORS_ORIGIN:-}
+      AI_PROVIDER: ${AI_PROVIDER:-mock}
+      AI_API_KEY: ${AI_API_KEY:-}
+      AI_MODEL: ${AI_MODEL:-}
+      AI_BASE_URL: ${AI_BASE_URL:-}
+      FISH_AUDIO_API_KEY: ${FISH_AUDIO_API_KEY:-}
+      AUDIO_STORAGE_DIR: /app/uploads/audio
     ports:
       - "3000:3000"
     depends_on:
@@ -71,7 +79,7 @@ services:
       interval: 30s
       timeout: 10s
       retries: 3
-      start_period: 40s
+      start_period: 90s
 
   # Frontend
   frontend:

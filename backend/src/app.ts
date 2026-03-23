@@ -3,6 +3,8 @@ import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import dotenv from 'dotenv';
+import path from 'path';
+import fs from 'fs';
 
 dotenv.config();
 
@@ -20,14 +22,50 @@ const app: Application = express();
 
 // Middleware
 app.use(helmet());
-app.use(cors());
-app.use(morgan('dev'));
+
+// CORS - configurable via CORS_ORIGIN env var (comma-separated origins, or '*' for all)
+const corsOrigin = process.env.CORS_ORIGIN;
+const corsOptions: cors.CorsOptions = corsOrigin
+  ? {
+      origin: corsOrigin === '*' ? '*' : corsOrigin.split(',').map((o) => o.trim()),
+      credentials: corsOrigin !== '*',
+    }
+  : { origin: true, credentials: true };
+app.use(cors(corsOptions));
+
+app.use(morgan(process.env.NODE_ENV === 'production' ? 'combined' : 'dev'));
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true }));
 
 // Health check
+const { version } = require('../package.json') as { version: string };
 app.get('/health', (_req: Request, res: Response) => {
-  res.json({ status: 'ok', timestamp: new Date().toISOString() });
+  res.json({ status: 'ok', version, timestamp: new Date().toISOString() });
+});
+
+// ─── Audio File Serving ───────────────────────────────────────
+// Serves generated (and mock) audio files from AUDIO_STORAGE_DIR.
+// In production, offload this to a CDN / object storage.
+const audioStorageDir = process.env.AUDIO_STORAGE_DIR || '/tmp/codetube-audio';
+// Ensure the directory exists on startup
+if (!fs.existsSync(audioStorageDir)) {
+  fs.mkdirSync(audioStorageDir, { recursive: true });
+}
+app.use('/api/audio', express.static(audioStorageDir, { maxAge: '1h' }));
+
+// Mock audio endpoint: returns a silent 1s MP3 for any mock URL
+// so the frontend never hard-errors when Fish Audio is not configured.
+app.get('/api/audio/mock/:persona/:filename', (_req: Request, res: Response) => {
+  // Tiny valid MP3 (1 frame of silence at 128kbps)
+  // This is a minimal valid MP3 header so audio elements don't error.
+  const silentMp3 = Buffer.from(
+    'fffb9000000000000000000000000000000000000000000000000000000000000000' +
+    '000000000000000000000000000000000000000000000000000000000000000000000000',
+    'hex'
+  );
+  res.setHeader('Content-Type', 'audio/mpeg');
+  res.setHeader('Cache-Control', 'public, max-age=86400');
+  res.send(silentMp3);
 });
 
 // API Routes

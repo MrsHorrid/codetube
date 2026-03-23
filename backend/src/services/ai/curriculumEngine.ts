@@ -35,6 +35,12 @@ async function callLLM(prompt: string, systemPrompt: string): Promise<string> {
   }
 
   if (config.provider === 'openai') {
+    if (!config.apiKey) {
+      throw new Error(
+        'AI_PROVIDER is set to "openai" but AI_API_KEY is missing. ' +
+        'Add your OpenAI API key to .env, or set AI_PROVIDER="mock" to run without a key.'
+      );
+    }
     const url = config.baseUrl || 'https://api.openai.com/v1/chat/completions';
     const res = await fetch(url, {
       method: 'POST',
@@ -58,6 +64,12 @@ async function callLLM(prompt: string, systemPrompt: string): Promise<string> {
   }
 
   if (config.provider === 'anthropic') {
+    if (!config.apiKey) {
+      throw new Error(
+        'AI_PROVIDER is set to "anthropic" but AI_API_KEY is missing. ' +
+        'Add your Anthropic API key to .env, or set AI_PROVIDER="mock" to run without a key.'
+      );
+    }
     const url = config.baseUrl || 'https://api.anthropic.com/v1/messages';
     const res = await fetch(url, {
       method: 'POST',

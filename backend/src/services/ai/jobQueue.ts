@@ -23,10 +23,16 @@ import { generateAllLessons } from './lessonGenerator';
 import { synthesizeNarration, buildAudioEvents } from './voiceSynthesis';
 
 // ─── In-Memory Job Store ──────────────────────────────────────
-// In production, swap this for Redis + BullMQ
+// ⚠️  WARNING: In-memory only — all jobs are LOST on server restart.
+// In production, swap this for Redis + BullMQ for persistence, retries,
+// and horizontal scaling across multiple server instances.
 
 const jobs = new Map<string, GenerationJob>();
 const courseJobs = new Map<string, string>(); // courseId → jobId
+
+// Job processing timeout (default 10 min for real LLMs, 30s for mock)
+const JOB_TIMEOUT_MS = parseInt(process.env.JOB_TIMEOUT_MS || '0', 10) ||
+  (process.env.AI_PROVIDER === 'mock' ? 30_000 : 10 * 60_000);
 
 // ─── Job Management ───────────────────────────────────────────
 
@@ -81,6 +87,18 @@ export function listJobs(limit = 20): GenerationJob[] {
 }
 
 // ─── Job Processor ────────────────────────────────────────────
+
+async function processJobWithTimeout(jobId: string): Promise<void> {
+  const timeoutPromise = new Promise<never>((_, reject) =>
+    setTimeout(
+      () => reject(new Error(`Job timed out after ${JOB_TIMEOUT_MS / 1000}s. ` +
+        'If using a real LLM, check your API key and network. ' +
+        'Increase JOB_TIMEOUT_MS env var if needed.')),
+      JOB_TIMEOUT_MS
+    )
+  );
+  return Promise.race([processJob(jobId), timeoutPromise]);
+}
 
 async function processJob(jobId: string): Promise<void> {
   const job = jobs.get(jobId);
@@ -160,6 +178,18 @@ async function processJob(jobId: string): Promise<void> {
 
 // ─── Queue Interface ──────────────────────────────────────────
 
+// Log a startup warning so operators know the queue is ephemeral
+(function warnInMemoryQueue() {
+  const provider = process.env.AI_PROVIDER || 'mock';
+  console.warn(
+    '[JobQueue] ⚠️  Using IN-MEMORY job store — all queued jobs will be lost on restart. ' +
+    `AI provider: "${provider}". ` +
+    (provider === 'mock'
+      ? 'Running in mock mode — no API key required.'
+      : 'To upgrade: install BullMQ + Redis and replace the in-memory store.')
+  );
+})();
+
 /**
  * Enqueue a new course generation job.
  * Returns immediately with the job; processing runs in the background.
@@ -171,10 +201,16 @@ export async function enqueueGenerationJob(
 ): Promise<GenerationJob> {
   const job = createJob(topic, level, voice);
 
-  // Process asynchronously (non-blocking)
+  // Process asynchronously (non-blocking) with timeout guard
   setImmediate(() => {
-    processJob(job.id).catch((err) => {
-      console.error(`[JobQueue] Unhandled error in job ${job.id}:`, err);
+    processJobWithTimeout(job.id).catch((err) => {
+      const message = err instanceof Error ? err.message : String(err);
+      console.error(`[JobQueue] Unhandled error in job ${job.id}:`, message);
+      // Ensure job is marked failed even if processJob itself didn't catch it
+      const current = jobs.get(job.id);
+      if (current && current.status !== 'completed' && current.status !== 'failed') {
+        updateJob(job.id, { status: 'failed', error: message });
+      }
     });
   });
 

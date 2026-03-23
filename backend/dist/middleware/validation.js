@@ -38,6 +38,21 @@ const validateRequest = (schema) => {
 };
 exports.validateRequest = validateRequest;
 const errorHandler = (err, _req, res, _next) => {
+    // Handle Zod validation errors with a 400
+    if (err instanceof zod_1.ZodError) {
+        res.status(400).json({
+            success: false,
+            error: {
+                code: 'VALIDATION_ERROR',
+                message: 'Invalid request data',
+                details: err.issues.map((e) => ({
+                    field: e.path.join('.'),
+                    message: e.message,
+                })),
+            },
+        });
+        return;
+    }
     console.error('Error:', err);
     res.status(500).json({
         success: false,

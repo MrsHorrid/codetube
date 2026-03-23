@@ -1,33 +1,33 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.prisma = void 0;
-const client_1 = require("@prisma/client");
-// Test database setup
-const prisma = new client_1.PrismaClient({
-    datasources: {
-        db: {
-            url: 'file:./test.db',
-        },
-    },
-});
-exports.prisma = prisma;
+const prisma_1 = __importDefault(require("../models/prisma"));
+exports.prisma = prisma_1.default;
 // Global setup
 global.beforeAll(async () => {
-    // Clean test database
-    await prisma.$executeRawUnsafe(`DELETE FROM viewer_progress;`);
-    await prisma.$executeRawUnsafe(`DELETE FROM viewer_forks;`);
-    await prisma.$executeRawUnsafe(`DELETE FROM checkpoints;`);
-    await prisma.$executeRawUnsafe(`DELETE FROM recordings;`);
-    await prisma.$executeRawUnsafe(`DELETE FROM comments;`);
-    await prisma.$executeRawUnsafe(`DELETE FROM subscriptions;`);
-    await prisma.$executeRawUnsafe(`DELETE FROM tutorial_likes;`);
-    await prisma.$executeRawUnsafe(`DELETE FROM comment_likes;`);
-    await prisma.$executeRawUnsafe(`DELETE FROM notifications;`);
-    await prisma.$executeRawUnsafe(`DELETE FROM analytics_events;`);
-    await prisma.$executeRawUnsafe(`DELETE FROM tutorials;`);
-    await prisma.$executeRawUnsafe(`DELETE FROM users;`);
+    // Clean test database using Prisma deleteMany (safer than raw SQL)
+    try {
+        await prisma_1.default.viewerProgress.deleteMany({});
+        await prisma_1.default.viewerFork.deleteMany({});
+        await prisma_1.default.checkpoint.deleteMany({});
+        await prisma_1.default.recording.deleteMany({});
+        await prisma_1.default.comment.deleteMany({});
+        await prisma_1.default.subscription.deleteMany({});
+        await prisma_1.default.tutorialLike.deleteMany({});
+        await prisma_1.default.commentLike.deleteMany({});
+        await prisma_1.default.notification.deleteMany({});
+        await prisma_1.default.analyticsEvent.deleteMany({});
+        await prisma_1.default.tutorial.deleteMany({});
+        await prisma_1.default.user.deleteMany({});
+    }
+    catch {
+        // Tables might not exist yet, that's okay
+    }
 });
 global.afterAll(async () => {
-    await prisma.$disconnect();
+    await prisma_1.default.$disconnect();
 });
 //# sourceMappingURL=setup.js.map

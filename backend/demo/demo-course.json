@@ -1,0 +1,7421 @@
+{
+  "generatedAt": "2026-03-23T14:54:57.594Z",
+  "provider": "mock",
+  "fishAudioEnabled": false,
+  "course": {
+    "id": "demo-course",
+    "title": "TypeScript: A Practical Beginner Guide",
+    "description": "Master TypeScript from the ground up with hands-on projects and real-world examples. This beginner-level course takes you from core concepts to production-ready code.",
+    "topic": "TypeScript",
+    "level": "beginner",
+    "totalLessons": 3,
+    "estimatedTotalDurationSec": 2280,
+    "prerequisites": [
+      "Basic computer skills"
+    ],
+    "outcomes": [
+      "Understand core TypeScript concepts",
+      "Build real projects using TypeScript",
+      "Debug and troubleshoot common issues",
+      "Apply best practices in production"
+    ]
+  },
+  "lessons": [
+    {
+      "lessonIndex": 0,
+      "title": "Introduction to TypeScript",
+      "objective": "Understand what TypeScript is, why it matters, and set up your development environment",
+      "durationSec": 95,
+      "codeExamplesCount": 2,
+      "exercisesCount": 1,
+      "checkpointsCount": 2,
+      "audioSegmentsCount": 4,
+      "typeEventsCount": 605,
+      "totalEventsCount": 611,
+      "recordingEvents": [
+        {
+          "type": "AUDIO",
+          "timestamp": 0,
+          "data": {
+            "url": "/api/audio/mock/chill/QWxyaWdo.mp3",
+            "text": "Alright, welcome to Introduction to TypeScript. In this lesson we're going to get hands-on with TypeScript. By the end you'll have a solid understanding of the core concepts, and you'll have written some real code.",
+            "persona": "chill",
+            "durationMs": 14000
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 12000,
+          "data": {
+            "char": "/",
+            "cursor": {
+              "line": 0,
+              "col": 0
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 12086.524033010346,
+          "data": {
+            "char": "/",
+            "cursor": {
+              "line": 0,
+              "col": 1
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 12173.048066020692,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 0,
+              "col": 2
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 12259.572099031038,
+          "data": {
+            "char": "I",
+            "cursor": {
+              "line": 0,
+              "col": 3
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 12346.096132041384,
+          "data": {
+            "char": "n",
+            "cursor": {
+              "line": 0,
+              "col": 4
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 12432.62016505173,
+          "data": {
+            "char": "t",
+            "cursor": {
+              "line": 0,
+              "col": 5
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 12519.144198062077,
+          "data": {
+            "char": "r",
+            "cursor": {
+              "line": 0,
+              "col": 6
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 12605.668231072423,
+          "data": {
+            "char": "o",
+            "cursor": {
+              "line": 0,
+              "col": 7
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 12692.192264082769,
+          "data": {
+            "char": "d",
+            "cursor": {
+              "line": 0,
+              "col": 8
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 12778.716297093115,
+          "data": {
+            "char": "u",
+            "cursor": {
+              "line": 0,
+              "col": 9
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 12865.240330103461,
+          "data": {
+            "char": "c",
+            "cursor": {
+              "line": 0,
+              "col": 10
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 12951.764363113807,
+          "data": {
+            "char": "t",
+            "cursor": {
+              "line": 0,
+              "col": 11
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 13038.288396124153,
+          "data": {
+            "char": "i",
+            "cursor": {
+              "line": 0,
+              "col": 12
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 13124.8124291345,
+          "data": {
+            "char": "o",
+            "cursor": {
+              "line": 0,
+              "col": 13
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 13211.336462144845,
+          "data": {
+            "char": "n",
+            "cursor": {
+              "line": 0,
+              "col": 14
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 13297.860495155192,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 0,
+              "col": 15
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 13384.384528165538,
+          "data": {
+            "char": "t",
+            "cursor": {
+              "line": 0,
+              "col": 16
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 13470.908561175884,
+          "data": {
+            "char": "o",
+            "cursor": {
+              "line": 0,
+              "col": 17
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 13557.43259418623,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 0,
+              "col": 18
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 13643.956627196576,
+          "data": {
+            "char": "T",
+            "cursor": {
+              "line": 0,
+              "col": 19
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 13730.480660206922,
+          "data": {
+            "char": "y",
+            "cursor": {
+              "line": 0,
+              "col": 20
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 13817.004693217268,
+          "data": {
+            "char": "p",
+            "cursor": {
+              "line": 0,
+              "col": 21
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 13903.528726227614,
+          "data": {
+            "char": "e",
+            "cursor": {
+              "line": 0,
+              "col": 22
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 13990.05275923796,
+          "data": {
+            "char": "S",
+            "cursor": {
+              "line": 0,
+              "col": 23
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 14076.576792248306,
+          "data": {
+            "char": "c",
+            "cursor": {
+              "line": 0,
+              "col": 24
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 14163.100825258653,
+          "data": {
+            "char": "r",
+            "cursor": {
+              "line": 0,
+              "col": 25
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 14249.624858268999,
+          "data": {
+            "char": "i",
+            "cursor": {
+              "line": 0,
+              "col": 26
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 14336.148891279345,
+          "data": {
+            "char": "p",
+            "cursor": {
+              "line": 0,
+              "col": 27
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 14422.67292428969,
+          "data": {
+            "char": "t",
+            "cursor": {
+              "line": 0,
+              "col": 28
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "AUDIO",
+          "timestamp": 14500,
+          "data": {
+            "url": "/api/audio/mock/chill/TGV0J3Mg.mp3",
+            "text": "Let's start simple. Here's your first TypeScript program. Don't worry if it looks unfamiliar — we'll break down every single line.",
+            "persona": "chill",
+            "durationMs": 8400
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 14509.196957300037,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 0,
+              "col": 29
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 14595.720990310383,
+          "data": {
+            "char": "-",
+            "cursor": {
+              "line": 0,
+              "col": 30
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 14682.24502332073,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 0,
+              "col": 31
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 14768.769056331075,
+          "data": {
+            "char": "T",
+            "cursor": {
+              "line": 0,
+              "col": 32
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 14855.293089341421,
+          "data": {
+            "char": "y",
+            "cursor": {
+              "line": 0,
+              "col": 33
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 14941.817122351767,
+          "data": {
+            "char": "p",
+            "cursor": {
+              "line": 0,
+              "col": 34
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 15028.341155362114,
+          "data": {
+            "char": "e",
+            "cursor": {
+              "line": 0,
+              "col": 35
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 15114.86518837246,
+          "data": {
+            "char": "S",
+            "cursor": {
+              "line": 0,
+              "col": 36
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 15201.389221382806,
+          "data": {
+            "char": "c",
+            "cursor": {
+              "line": 0,
+              "col": 37
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 15287.913254393152,
+          "data": {
+            "char": "r",
+            "cursor": {
+              "line": 0,
+              "col": 38
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 15374.437287403498,
+          "data": {
+            "char": "i",
+            "cursor": {
+              "line": 0,
+              "col": 39
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 15460.961320413844,
+          "data": {
+            "char": "p",
+            "cursor": {
+              "line": 0,
+              "col": 40
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 15547.48535342419,
+          "data": {
+            "char": "t",
+            "cursor": {
+              "line": 0,
+              "col": 41
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 15634.009386434536,
+          "data": {
+            "char": "\n",
+            "cursor": {
+              "line": 0,
+              "col": 42
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 15834.009386434536,
+          "data": {
+            "char": "/",
+            "cursor": {
+              "line": 1,
+              "col": 0
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 15927.099925664985,
+          "data": {
+            "char": "/",
+            "cursor": {
+              "line": 1,
+              "col": 1
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 16020.190464895433,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 1,
+              "col": 2
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 16113.281004125882,
+          "data": {
+            "char": "E",
+            "cursor": {
+              "line": 1,
+              "col": 3
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 16206.37154335633,
+          "data": {
+            "char": "x",
+            "cursor": {
+              "line": 1,
+              "col": 4
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 16299.462082586779,
+          "data": {
+            "char": "a",
+            "cursor": {
+              "line": 1,
+              "col": 5
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 16392.552621817227,
+          "data": {
+            "char": "m",
+            "cursor": {
+              "line": 1,
+              "col": 6
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 16485.643161047676,
+          "data": {
+            "char": "p",
+            "cursor": {
+              "line": 1,
+              "col": 7
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 16578.733700278124,
+          "data": {
+            "char": "l",
+            "cursor": {
+              "line": 1,
+              "col": 8
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 16671.824239508573,
+          "data": {
+            "char": "e",
+            "cursor": {
+              "line": 1,
+              "col": 9
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 16764.91477873902,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 1,
+              "col": 10
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 16858.00531796947,
+          "data": {
+            "char": "1",
+            "cursor": {
+              "line": 1,
+              "col": 11
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 16951.095857199918,
+          "data": {
+            "char": ":",
+            "cursor": {
+              "line": 1,
+              "col": 12
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 17044.186396430367,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 1,
+              "col": 13
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 17137.276935660815,
+          "data": {
+            "char": "G",
+            "cursor": {
+              "line": 1,
+              "col": 14
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 17230.367474891264,
+          "data": {
+            "char": "e",
+            "cursor": {
+              "line": 1,
+              "col": 15
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 17323.458014121712,
+          "data": {
+            "char": "t",
+            "cursor": {
+              "line": 1,
+              "col": 16
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 17416.54855335216,
+          "data": {
+            "char": "t",
+            "cursor": {
+              "line": 1,
+              "col": 17
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 17509.63909258261,
+          "data": {
+            "char": "i",
+            "cursor": {
+              "line": 1,
+              "col": 18
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 17602.729631813057,
+          "data": {
+            "char": "n",
+            "cursor": {
+              "line": 1,
+              "col": 19
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 17695.820171043506,
+          "data": {
+            "char": "g",
+            "cursor": {
+              "line": 1,
+              "col": 20
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 17788.910710273954,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 1,
+              "col": 21
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 17882.001249504403,
+          "data": {
+            "char": "s",
+            "cursor": {
+              "line": 1,
+              "col": 22
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 17975.09178873485,
+          "data": {
+            "char": "t",
+            "cursor": {
+              "line": 1,
+              "col": 23
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 18068.1823279653,
+          "data": {
+            "char": "a",
+            "cursor": {
+              "line": 1,
+              "col": 24
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 18161.27286719575,
+          "data": {
+            "char": "r",
+            "cursor": {
+              "line": 1,
+              "col": 25
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 18254.363406426197,
+          "data": {
+            "char": "t",
+            "cursor": {
+              "line": 1,
+              "col": 26
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 18347.453945656645,
+          "data": {
+            "char": "e",
+            "cursor": {
+              "line": 1,
+              "col": 27
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 18440.544484887094,
+          "data": {
+            "char": "d",
+            "cursor": {
+              "line": 1,
+              "col": 28
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 18533.635024117542,
+          "data": {
+            "char": "\n",
+            "cursor": {
+              "line": 1,
+              "col": 29
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 18733.635024117542,
+          "data": {
+            "char": "\n",
+            "cursor": {
+              "line": 2,
+              "col": 0
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 18933.635024117542,
+          "data": {
+            "char": "f",
+            "cursor": {
+              "line": 3,
+              "col": 0
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 19028.17137182169,
+          "data": {
+            "char": "u",
+            "cursor": {
+              "line": 3,
+              "col": 1
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 19122.707719525835,
+          "data": {
+            "char": "n",
+            "cursor": {
+              "line": 3,
+              "col": 2
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 19217.24406722998,
+          "data": {
+            "char": "c",
+            "cursor": {
+              "line": 3,
+              "col": 3
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 19311.78041493413,
+          "data": {
+            "char": "t",
+            "cursor": {
+              "line": 3,
+              "col": 4
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 19406.316762638275,
+          "data": {
+            "char": "i",
+            "cursor": {
+              "line": 3,
+              "col": 5
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 19500.85311034242,
+          "data": {
+            "char": "o",
+            "cursor": {
+              "line": 3,
+              "col": 6
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 19595.389458046568,
+          "data": {
+            "char": "n",
+            "cursor": {
+              "line": 3,
+              "col": 7
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 19689.925805750714,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 3,
+              "col": 8
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 19784.46215345486,
+          "data": {
+            "char": "g",
+            "cursor": {
+              "line": 3,
+              "col": 9
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 19878.998501159007,
+          "data": {
+            "char": "r",
+            "cursor": {
+              "line": 3,
+              "col": 10
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 19973.534848863153,
+          "data": {
+            "char": "e",
+            "cursor": {
+              "line": 3,
+              "col": 11
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 20068.0711965673,
+          "data": {
+            "char": "e",
+            "cursor": {
+              "line": 3,
+              "col": 12
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 20162.607544271446,
+          "data": {
+            "char": "t",
+            "cursor": {
+              "line": 3,
+              "col": 13
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 20257.143891975593,
+          "data": {
+            "char": "(",
+            "cursor": {
+              "line": 3,
+              "col": 14
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 20351.68023967974,
+          "data": {
+            "char": "n",
+            "cursor": {
+              "line": 3,
+              "col": 15
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 20446.216587383886,
+          "data": {
+            "char": "a",
+            "cursor": {
+              "line": 3,
+              "col": 16
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 20540.752935088032,
+          "data": {
+            "char": "m",
+            "cursor": {
+              "line": 3,
+              "col": 17
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 20635.28928279218,
+          "data": {
+            "char": "e",
+            "cursor": {
+              "line": 3,
+              "col": 18
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 20729.825630496325,
+          "data": {
+            "char": ":",
+            "cursor": {
+              "line": 3,
+              "col": 19
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 20824.36197820047,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 3,
+              "col": 20
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 20918.898325904618,
+          "data": {
+            "char": "s",
+            "cursor": {
+              "line": 3,
+              "col": 21
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 21013.434673608765,
+          "data": {
+            "char": "t",
+            "cursor": {
+              "line": 3,
+              "col": 22
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 21107.97102131291,
+          "data": {
+            "char": "r",
+            "cursor": {
+              "line": 3,
+              "col": 23
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 21202.507369017057,
+          "data": {
+            "char": "i",
+            "cursor": {
+              "line": 3,
+              "col": 24
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 21297.043716721204,
+          "data": {
+            "char": "n",
+            "cursor": {
+              "line": 3,
+              "col": 25
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 21391.58006442535,
+          "data": {
+            "char": "g",
+            "cursor": {
+              "line": 3,
+              "col": 26
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 21486.116412129497,
+          "data": {
+            "char": ")",
+            "cursor": {
+              "line": 3,
+              "col": 27
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 21580.652759833643,
+          "data": {
+            "char": ":",
+            "cursor": {
+              "line": 3,
+              "col": 28
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 21675.18910753779,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 3,
+              "col": 29
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 21769.725455241936,
+          "data": {
+            "char": "s",
+            "cursor": {
+              "line": 3,
+              "col": 30
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 21864.261802946083,
+          "data": {
+            "char": "t",
+            "cursor": {
+              "line": 3,
+              "col": 31
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 21958.79815065023,
+          "data": {
+            "char": "r",
+            "cursor": {
+              "line": 3,
+              "col": 32
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 22053.334498354376,
+          "data": {
+            "char": "i",
+            "cursor": {
+              "line": 3,
+              "col": 33
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 22147.870846058522,
+          "data": {
+            "char": "n",
+            "cursor": {
+              "line": 3,
+              "col": 34
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 22242.40719376267,
+          "data": {
+            "char": "g",
+            "cursor": {
+              "line": 3,
+              "col": 35
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 22336.943541466815,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 3,
+              "col": 36
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 22431.47988917096,
+          "data": {
+            "char": "{",
+            "cursor": {
+              "line": 3,
+              "col": 37
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 22526.016236875108,
+          "data": {
+            "char": "\n",
+            "cursor": {
+              "line": 3,
+              "col": 38
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 22726.016236875108,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 4,
+              "col": 0
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 22766.811235877885,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 4,
+              "col": 1
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 22807.606234880663,
+          "data": {
+            "char": "r",
+            "cursor": {
+              "line": 4,
+              "col": 2
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 22848.40123388344,
+          "data": {
+            "char": "e",
+            "cursor": {
+              "line": 4,
+              "col": 3
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 22889.196232886217,
+          "data": {
+            "char": "t",
+            "cursor": {
+              "line": 4,
+              "col": 4
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 22929.991231888995,
+          "data": {
+            "char": "u",
+            "cursor": {
+              "line": 4,
+              "col": 5
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 22970.786230891772,
+          "data": {
+            "char": "r",
+            "cursor": {
+              "line": 4,
+              "col": 6
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 23011.58122989455,
+          "data": {
+            "char": "n",
+            "cursor": {
+              "line": 4,
+              "col": 7
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 23052.376228897327,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 4,
+              "col": 8
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 23093.171227900104,
+          "data": {
+            "char": "`",
+            "cursor": {
+              "line": 4,
+              "col": 9
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 23133.96622690288,
+          "data": {
+            "char": "H",
+            "cursor": {
+              "line": 4,
+              "col": 10
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 23174.76122590566,
+          "data": {
+            "char": "e",
+            "cursor": {
+              "line": 4,
+              "col": 11
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 23215.556224908436,
+          "data": {
+            "char": "l",
+            "cursor": {
+              "line": 4,
+              "col": 12
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 23256.351223911213,
+          "data": {
+            "char": "l",
+            "cursor": {
+              "line": 4,
+              "col": 13
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 23297.14622291399,
+          "data": {
+            "char": "o",
+            "cursor": {
+              "line": 4,
+              "col": 14
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 23337.941221916768,
+          "data": {
+            "char": ",",
+            "cursor": {
+              "line": 4,
+              "col": 15
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 23378.736220919545,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 4,
+              "col": 16
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "AUDIO",
+          "timestamp": 23400,
+          "data": {
+            "url": "/api/audio/mock/chill/Tm93IGxl.mp3",
+            "text": "Now let's level it up a notch. We'll add some structure using interfaces and classes. This is how real TypeScript code looks in production.",
+            "persona": "chill",
+            "durationMs": 9600
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 23419.531219922323,
+          "data": {
+            "char": "$",
+            "cursor": {
+              "line": 4,
+              "col": 17
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 23460.3262189251,
+          "data": {
+            "char": "{",
+            "cursor": {
+              "line": 4,
+              "col": 18
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 23501.121217927877,
+          "data": {
+            "char": "n",
+            "cursor": {
+              "line": 4,
+              "col": 19
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 23541.916216930655,
+          "data": {
+            "char": "a",
+            "cursor": {
+              "line": 4,
+              "col": 20
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 23582.711215933432,
+          "data": {
+            "char": "m",
+            "cursor": {
+              "line": 4,
+              "col": 21
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 23623.50621493621,
+          "data": {
+            "char": "e",
+            "cursor": {
+              "line": 4,
+              "col": 22
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 23664.301213938987,
+          "data": {
+            "char": "}",
+            "cursor": {
+              "line": 4,
+              "col": 23
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 23705.096212941764,
+          "data": {
+            "char": "!",
+            "cursor": {
+              "line": 4,
+              "col": 24
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 23745.89121194454,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 4,
+              "col": 25
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 23786.68621094732,
+          "data": {
+            "char": "W",
+            "cursor": {
+              "line": 4,
+              "col": 26
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 23827.481209950096,
+          "data": {
+            "char": "e",
+            "cursor": {
+              "line": 4,
+              "col": 27
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 23868.276208952873,
+          "data": {
+            "char": "l",
+            "cursor": {
+              "line": 4,
+              "col": 28
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 23909.07120795565,
+          "data": {
+            "char": "c",
+            "cursor": {
+              "line": 4,
+              "col": 29
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 23949.866206958428,
+          "data": {
+            "char": "o",
+            "cursor": {
+              "line": 4,
+              "col": 30
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 23990.661205961205,
+          "data": {
+            "char": "m",
+            "cursor": {
+              "line": 4,
+              "col": 31
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 24031.456204963983,
+          "data": {
+            "char": "e",
+            "cursor": {
+              "line": 4,
+              "col": 32
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 24072.25120396676,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 4,
+              "col": 33
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 24113.046202969537,
+          "data": {
+            "char": "t",
+            "cursor": {
+              "line": 4,
+              "col": 34
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 24153.841201972315,
+          "data": {
+            "char": "o",
+            "cursor": {
+              "line": 4,
+              "col": 35
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 24194.636200975092,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 4,
+              "col": 36
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 24235.43119997787,
+          "data": {
+            "char": "T",
+            "cursor": {
+              "line": 4,
+              "col": 37
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 24276.226198980647,
+          "data": {
+            "char": "y",
+            "cursor": {
+              "line": 4,
+              "col": 38
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 24317.021197983424,
+          "data": {
+            "char": "p",
+            "cursor": {
+              "line": 4,
+              "col": 39
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 24357.8161969862,
+          "data": {
+            "char": "e",
+            "cursor": {
+              "line": 4,
+              "col": 40
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 24398.61119598898,
+          "data": {
+            "char": "S",
+            "cursor": {
+              "line": 4,
+              "col": 41
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 24439.406194991756,
+          "data": {
+            "char": "c",
+            "cursor": {
+              "line": 4,
+              "col": 42
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 24480.201193994533,
+          "data": {
+            "char": "r",
+            "cursor": {
+              "line": 4,
+              "col": 43
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 24520.99619299731,
+          "data": {
+            "char": "i",
+            "cursor": {
+              "line": 4,
+              "col": 44
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 24561.791192000088,
+          "data": {
+            "char": "p",
+            "cursor": {
+              "line": 4,
+              "col": 45
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 24602.586191002865,
+          "data": {
+            "char": "t",
+            "cursor": {
+              "line": 4,
+              "col": 46
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 24643.381190005643,
+          "data": {
+            "char": ".",
+            "cursor": {
+              "line": 4,
+              "col": 47
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 24684.17618900842,
+          "data": {
+            "char": "`",
+            "cursor": {
+              "line": 4,
+              "col": 48
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 24724.971188011197,
+          "data": {
+            "char": ";",
+            "cursor": {
+              "line": 4,
+              "col": 49
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 24765.766187013975,
+          "data": {
+            "char": "\n",
+            "cursor": {
+              "line": 4,
+              "col": 50
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 24965.766187013975,
+          "data": {
+            "char": "}",
+            "cursor": {
+              "line": 5,
+              "col": 0
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 25029.428488738693,
+          "data": {
+            "char": "\n",
+            "cursor": {
+              "line": 5,
+              "col": 1
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 25229.428488738693,
+          "data": {
+            "char": "\n",
+            "cursor": {
+              "line": 6,
+              "col": 0
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 25429.428488738693,
+          "data": {
+            "char": "c",
+            "cursor": {
+              "line": 7,
+              "col": 0
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 25481.106264555023,
+          "data": {
+            "char": "o",
+            "cursor": {
+              "line": 7,
+              "col": 1
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 25532.784040371353,
+          "data": {
+            "char": "n",
+            "cursor": {
+              "line": 7,
+              "col": 2
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 25584.461816187682,
+          "data": {
+            "char": "s",
+            "cursor": {
+              "line": 7,
+              "col": 3
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 25636.139592004012,
+          "data": {
+            "char": "o",
+            "cursor": {
+              "line": 7,
+              "col": 4
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 25687.817367820342,
+          "data": {
+            "char": "l",
+            "cursor": {
+              "line": 7,
+              "col": 5
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 25739.495143636672,
+          "data": {
+            "char": "e",
+            "cursor": {
+              "line": 7,
+              "col": 6
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 25791.172919453,
+          "data": {
+            "char": ".",
+            "cursor": {
+              "line": 7,
+              "col": 7
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 25842.85069526933,
+          "data": {
+            "char": "l",
+            "cursor": {
+              "line": 7,
+              "col": 8
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 25894.52847108566,
+          "data": {
+            "char": "o",
+            "cursor": {
+              "line": 7,
+              "col": 9
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 25946.20624690199,
+          "data": {
+            "char": "g",
+            "cursor": {
+              "line": 7,
+              "col": 10
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 25997.88402271832,
+          "data": {
+            "char": "(",
+            "cursor": {
+              "line": 7,
+              "col": 11
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 26049.56179853465,
+          "data": {
+            "char": "g",
+            "cursor": {
+              "line": 7,
+              "col": 12
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 26101.23957435098,
+          "data": {
+            "char": "r",
+            "cursor": {
+              "line": 7,
+              "col": 13
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 26152.91735016731,
+          "data": {
+            "char": "e",
+            "cursor": {
+              "line": 7,
+              "col": 14
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 26204.59512598364,
+          "data": {
+            "char": "e",
+            "cursor": {
+              "line": 7,
+              "col": 15
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 26256.27290179997,
+          "data": {
+            "char": "t",
+            "cursor": {
+              "line": 7,
+              "col": 16
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 26307.9506776163,
+          "data": {
+            "char": "(",
+            "cursor": {
+              "line": 7,
+              "col": 17
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 26359.62845343263,
+          "data": {
+            "char": "\"",
+            "cursor": {
+              "line": 7,
+              "col": 18
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 26411.30622924896,
+          "data": {
+            "char": "W",
+            "cursor": {
+              "line": 7,
+              "col": 19
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 26462.98400506529,
+          "data": {
+            "char": "o",
+            "cursor": {
+              "line": 7,
+              "col": 20
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 26514.66178088162,
+          "data": {
+            "char": "r",
+            "cursor": {
+              "line": 7,
+              "col": 21
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 26566.33955669795,
+          "data": {
+            "char": "l",
+            "cursor": {
+              "line": 7,
+              "col": 22
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 26618.01733251428,
+          "data": {
+            "char": "d",
+            "cursor": {
+              "line": 7,
+              "col": 23
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 26669.69510833061,
+          "data": {
+            "char": "\"",
+            "cursor": {
+              "line": 7,
+              "col": 24
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 26721.37288414694,
+          "data": {
+            "char": ")",
+            "cursor": {
+              "line": 7,
+              "col": 25
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 26773.050659963268,
+          "data": {
+            "char": ")",
+            "cursor": {
+              "line": 7,
+              "col": 26
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 26824.728435779598,
+          "data": {
+            "char": ";",
+            "cursor": {
+              "line": 7,
+              "col": 27
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 26876.406211595928,
+          "data": {
+            "char": "\n",
+            "cursor": {
+              "line": 7,
+              "col": 28
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 27076.406211595928,
+          "data": {
+            "char": "/",
+            "cursor": {
+              "line": 8,
+              "col": 0
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 27173.76255454681,
+          "data": {
+            "char": "/",
+            "cursor": {
+              "line": 8,
+              "col": 1
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 27271.118897497694,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 8,
+              "col": 2
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 27368.475240448577,
+          "data": {
+            "char": "O",
+            "cursor": {
+              "line": 8,
+              "col": 3
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 27465.83158339946,
+          "data": {
+            "char": "u",
+            "cursor": {
+              "line": 8,
+              "col": 4
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 27563.187926350343,
+          "data": {
+            "char": "t",
+            "cursor": {
+              "line": 8,
+              "col": 5
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 27660.544269301226,
+          "data": {
+            "char": "p",
+            "cursor": {
+              "line": 8,
+              "col": 6
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 27757.90061225211,
+          "data": {
+            "char": "u",
+            "cursor": {
+              "line": 8,
+              "col": 7
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 27855.256955202993,
+          "data": {
+            "char": "t",
+            "cursor": {
+              "line": 8,
+              "col": 8
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 27952.613298153876,
+          "data": {
+            "char": ":",
+            "cursor": {
+              "line": 8,
+              "col": 9
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 28049.96964110476,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 8,
+              "col": 10
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 28147.325984055642,
+          "data": {
+            "char": "H",
+            "cursor": {
+              "line": 8,
+              "col": 11
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 28244.682327006525,
+          "data": {
+            "char": "e",
+            "cursor": {
+              "line": 8,
+              "col": 12
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 28342.03866995741,
+          "data": {
+            "char": "l",
+            "cursor": {
+              "line": 8,
+              "col": 13
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 28439.39501290829,
+          "data": {
+            "char": "l",
+            "cursor": {
+              "line": 8,
+              "col": 14
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 28536.751355859175,
+          "data": {
+            "char": "o",
+            "cursor": {
+              "line": 8,
+              "col": 15
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 28634.107698810058,
+          "data": {
+            "char": ",",
+            "cursor": {
+              "line": 8,
+              "col": 16
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 28731.46404176094,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 8,
+              "col": 17
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 28828.820384711824,
+          "data": {
+            "char": "W",
+            "cursor": {
+              "line": 8,
+              "col": 18
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 28926.176727662707,
+          "data": {
+            "char": "o",
+            "cursor": {
+              "line": 8,
+              "col": 19
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 29023.53307061359,
+          "data": {
+            "char": "r",
+            "cursor": {
+              "line": 8,
+              "col": 20
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 29120.889413564473,
+          "data": {
+            "char": "l",
+            "cursor": {
+              "line": 8,
+              "col": 21
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 29218.245756515356,
+          "data": {
+            "char": "d",
+            "cursor": {
+              "line": 8,
+              "col": 22
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 29315.60209946624,
+          "data": {
+            "char": "!",
+            "cursor": {
+              "line": 8,
+              "col": 23
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 29412.958442417123,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 8,
+              "col": 24
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 29510.314785368006,
+          "data": {
+            "char": "W",
+            "cursor": {
+              "line": 8,
+              "col": 25
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 29607.67112831889,
+          "data": {
+            "char": "e",
+            "cursor": {
+              "line": 8,
+              "col": 26
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 29705.027471269772,
+          "data": {
+            "char": "l",
+            "cursor": {
+              "line": 8,
+              "col": 27
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 29802.383814220655,
+          "data": {
+            "char": "c",
+            "cursor": {
+              "line": 8,
+              "col": 28
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 29899.740157171538,
+          "data": {
+            "char": "o",
+            "cursor": {
+              "line": 8,
+              "col": 29
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 29997.09650012242,
+          "data": {
+            "char": "m",
+            "cursor": {
+              "line": 8,
+              "col": 30
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 30094.452843073304,
+          "data": {
+            "char": "e",
+            "cursor": {
+              "line": 8,
+              "col": 31
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 30191.809186024188,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 8,
+              "col": 32
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 30289.16552897507,
+          "data": {
+            "char": "t",
+            "cursor": {
+              "line": 8,
+              "col": 33
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 30386.521871925954,
+          "data": {
+            "char": "o",
+            "cursor": {
+              "line": 8,
+              "col": 34
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 30483.878214876837,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 8,
+              "col": 35
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 30581.23455782772,
+          "data": {
+            "char": "T",
+            "cursor": {
+              "line": 8,
+              "col": 36
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 30678.590900778603,
+          "data": {
+            "char": "y",
+            "cursor": {
+              "line": 8,
+              "col": 37
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 30775.947243729486,
+          "data": {
+            "char": "p",
+            "cursor": {
+              "line": 8,
+              "col": 38
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 30873.30358668037,
+          "data": {
+            "char": "e",
+            "cursor": {
+              "line": 8,
+              "col": 39
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 30970.659929631252,
+          "data": {
+            "char": "S",
+            "cursor": {
+              "line": 8,
+              "col": 40
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 31068.016272582136,
+          "data": {
+            "char": "c",
+            "cursor": {
+              "line": 8,
+              "col": 41
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 31165.37261553302,
+          "data": {
+            "char": "r",
+            "cursor": {
+              "line": 8,
+              "col": 42
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 31262.7289584839,
+          "data": {
+            "char": "i",
+            "cursor": {
+              "line": 8,
+              "col": 43
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 31360.085301434785,
+          "data": {
+            "char": "p",
+            "cursor": {
+              "line": 8,
+              "col": 44
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 31457.441644385668,
+          "data": {
+            "char": "t",
+            "cursor": {
+              "line": 8,
+              "col": 45
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 31554.79798733655,
+          "data": {
+            "char": ".",
+            "cursor": {
+              "line": 8,
+              "col": 46
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 31652.154330287434,
+          "data": {
+            "char": "\n",
+            "cursor": {
+              "line": 8,
+              "col": 47
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "CHECKPOINT",
+          "timestamp": 32652.154330287434,
+          "data": {
+            "label": "First Code Check",
+            "description": "Make sure your greet function returns the correct string when called with your name"
+          }
+        },
+        {
+          "type": "AUDIO",
+          "timestamp": 33500,
+          "data": {
+            "url": "/api/audio/mock/chill/RXhjZWxs.mp3",
+            "text": "Excellent work! You've just built a working TypeScript structure. Take a moment to experiment — change the values, break things intentionally, and see what happens. That's how you really learn.",
+            "persona": "chill",
+            "durationMs": 12000
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 44652.154330287434,
+          "data": {
+            "char": "/",
+            "cursor": {
+              "line": 0,
+              "col": 0
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 44727.83435751921,
+          "data": {
+            "char": "/",
+            "cursor": {
+              "line": 0,
+              "col": 1
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 44803.51438475099,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 0,
+              "col": 2
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 44879.19441198277,
+          "data": {
+            "char": "E",
+            "cursor": {
+              "line": 0,
+              "col": 3
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 44954.874439214545,
+          "data": {
+            "char": "x",
+            "cursor": {
+              "line": 0,
+              "col": 4
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 45030.55446644632,
+          "data": {
+            "char": "a",
+            "cursor": {
+              "line": 0,
+              "col": 5
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 45106.2344936781,
+          "data": {
+            "char": "m",
+            "cursor": {
+              "line": 0,
+              "col": 6
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 45181.91452090988,
+          "data": {
+            "char": "p",
+            "cursor": {
+              "line": 0,
+              "col": 7
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 45257.59454814166,
+          "data": {
+            "char": "l",
+            "cursor": {
+              "line": 0,
+              "col": 8
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 45333.274575373434,
+          "data": {
+            "char": "e",
+            "cursor": {
+              "line": 0,
+              "col": 9
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 45408.95460260521,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 0,
+              "col": 10
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 45484.63462983699,
+          "data": {
+            "char": "2",
+            "cursor": {
+              "line": 0,
+              "col": 11
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 45560.31465706877,
+          "data": {
+            "char": ":",
+            "cursor": {
+              "line": 0,
+              "col": 12
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 45635.994684300545,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 0,
+              "col": 13
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 45711.67471153232,
+          "data": {
+            "char": "B",
+            "cursor": {
+              "line": 0,
+              "col": 14
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 45787.3547387641,
+          "data": {
+            "char": "u",
+            "cursor": {
+              "line": 0,
+              "col": 15
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 45863.03476599588,
+          "data": {
+            "char": "i",
+            "cursor": {
+              "line": 0,
+              "col": 16
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 45938.71479322766,
+          "data": {
+            "char": "l",
+            "cursor": {
+              "line": 0,
+              "col": 17
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 46014.394820459434,
+          "data": {
+            "char": "d",
+            "cursor": {
+              "line": 0,
+              "col": 18
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 46090.07484769121,
+          "data": {
+            "char": "i",
+            "cursor": {
+              "line": 0,
+              "col": 19
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 46165.75487492299,
+          "data": {
+            "char": "n",
+            "cursor": {
+              "line": 0,
+              "col": 20
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 46241.43490215477,
+          "data": {
+            "char": "g",
+            "cursor": {
+              "line": 0,
+              "col": 21
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 46317.114929386546,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 0,
+              "col": 22
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 46392.79495661832,
+          "data": {
+            "char": "o",
+            "cursor": {
+              "line": 0,
+              "col": 23
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 46468.4749838501,
+          "data": {
+            "char": "n",
+            "cursor": {
+              "line": 0,
+              "col": 24
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 46544.15501108188,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 0,
+              "col": 25
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 46619.83503831366,
+          "data": {
+            "char": "t",
+            "cursor": {
+              "line": 0,
+              "col": 26
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 46695.515065545434,
+          "data": {
+            "char": "h",
+            "cursor": {
+              "line": 0,
+              "col": 27
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 46771.19509277721,
+          "data": {
+            "char": "e",
+            "cursor": {
+              "line": 0,
+              "col": 28
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 46846.87512000899,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 0,
+              "col": 29
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 46922.55514724077,
+          "data": {
+            "char": "b",
+            "cursor": {
+              "line": 0,
+              "col": 30
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 46998.235174472546,
+          "data": {
+            "char": "a",
+            "cursor": {
+              "line": 0,
+              "col": 31
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 47073.91520170432,
+          "data": {
+            "char": "s",
+            "cursor": {
+              "line": 0,
+              "col": 32
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 47149.5952289361,
+          "data": {
+            "char": "i",
+            "cursor": {
+              "line": 0,
+              "col": 33
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 47225.27525616788,
+          "data": {
+            "char": "c",
+            "cursor": {
+              "line": 0,
+              "col": 34
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 47300.95528339966,
+          "data": {
+            "char": "s",
+            "cursor": {
+              "line": 0,
+              "col": 35
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 47376.635310631435,
+          "data": {
+            "char": "\n",
+            "cursor": {
+              "line": 0,
+              "col": 36
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 47576.635310631435,
+          "data": {
+            "char": "\n",
+            "cursor": {
+              "line": 1,
+              "col": 0
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 47776.635310631435,
+          "data": {
+            "char": "i",
+            "cursor": {
+              "line": 2,
+              "col": 0
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 47875.07095006949,
+          "data": {
+            "char": "n",
+            "cursor": {
+              "line": 2,
+              "col": 1
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 47973.50658950754,
+          "data": {
+            "char": "t",
+            "cursor": {
+              "line": 2,
+              "col": 2
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 48071.94222894559,
+          "data": {
+            "char": "e",
+            "cursor": {
+              "line": 2,
+              "col": 3
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 48170.37786838364,
+          "data": {
+            "char": "r",
+            "cursor": {
+              "line": 2,
+              "col": 4
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 48268.813507821695,
+          "data": {
+            "char": "f",
+            "cursor": {
+              "line": 2,
+              "col": 5
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 48367.24914725975,
+          "data": {
+            "char": "a",
+            "cursor": {
+              "line": 2,
+              "col": 6
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 48465.6847866978,
+          "data": {
+            "char": "c",
+            "cursor": {
+              "line": 2,
+              "col": 7
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 48564.12042613585,
+          "data": {
+            "char": "e",
+            "cursor": {
+              "line": 2,
+              "col": 8
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 48662.5560655739,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 2,
+              "col": 9
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 48760.991705011955,
+          "data": {
+            "char": "C",
+            "cursor": {
+              "line": 2,
+              "col": 10
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 48859.42734445001,
+          "data": {
+            "char": "o",
+            "cursor": {
+              "line": 2,
+              "col": 11
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 48957.86298388806,
+          "data": {
+            "char": "n",
+            "cursor": {
+              "line": 2,
+              "col": 12
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 49056.29862332611,
+          "data": {
+            "char": "f",
+            "cursor": {
+              "line": 2,
+              "col": 13
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 49154.73426276416,
+          "data": {
+            "char": "i",
+            "cursor": {
+              "line": 2,
+              "col": 14
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 49253.169902202215,
+          "data": {
+            "char": "g",
+            "cursor": {
+              "line": 2,
+              "col": 15
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 49351.60554164027,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 2,
+              "col": 16
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 49450.04118107832,
+          "data": {
+            "char": "{",
+            "cursor": {
+              "line": 2,
+              "col": 17
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 49548.47682051637,
+          "data": {
+            "char": "\n",
+            "cursor": {
+              "line": 2,
+              "col": 18
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 49748.47682051637,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 3,
+              "col": 0
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 49807.61039973703,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 3,
+              "col": 1
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 49866.74397895769,
+          "data": {
+            "char": "n",
+            "cursor": {
+              "line": 3,
+              "col": 2
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 49925.87755817835,
+          "data": {
+            "char": "a",
+            "cursor": {
+              "line": 3,
+              "col": 3
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 49985.01113739901,
+          "data": {
+            "char": "m",
+            "cursor": {
+              "line": 3,
+              "col": 4
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 50044.14471661967,
+          "data": {
+            "char": "e",
+            "cursor": {
+              "line": 3,
+              "col": 5
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 50103.278295840326,
+          "data": {
+            "char": ":",
+            "cursor": {
+              "line": 3,
+              "col": 6
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 50162.411875060985,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 3,
+              "col": 7
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 50221.545454281644,
+          "data": {
+            "char": "s",
+            "cursor": {
+              "line": 3,
+              "col": 8
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 50280.6790335023,
+          "data": {
+            "char": "t",
+            "cursor": {
+              "line": 3,
+              "col": 9
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 50339.81261272296,
+          "data": {
+            "char": "r",
+            "cursor": {
+              "line": 3,
+              "col": 10
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 50398.94619194362,
+          "data": {
+            "char": "i",
+            "cursor": {
+              "line": 3,
+              "col": 11
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 50458.07977116428,
+          "data": {
+            "char": "n",
+            "cursor": {
+              "line": 3,
+              "col": 12
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 50517.21335038494,
+          "data": {
+            "char": "g",
+            "cursor": {
+              "line": 3,
+              "col": 13
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 50576.3469296056,
+          "data": {
+            "char": ";",
+            "cursor": {
+              "line": 3,
+              "col": 14
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 50635.48050882626,
+          "data": {
+            "char": "\n",
+            "cursor": {
+              "line": 3,
+              "col": 15
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 50835.48050882626,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 4,
+              "col": 0
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 50900.840915000736,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 4,
+              "col": 1
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 50966.20132117521,
+          "data": {
+            "char": "v",
+            "cursor": {
+              "line": 4,
+              "col": 2
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 51031.56172734969,
+          "data": {
+            "char": "e",
+            "cursor": {
+              "line": 4,
+              "col": 3
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 51096.92213352417,
+          "data": {
+            "char": "r",
+            "cursor": {
+              "line": 4,
+              "col": 4
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 51162.282539698645,
+          "data": {
+            "char": "b",
+            "cursor": {
+              "line": 4,
+              "col": 5
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 51227.64294587312,
+          "data": {
+            "char": "o",
+            "cursor": {
+              "line": 4,
+              "col": 6
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 51293.0033520476,
+          "data": {
+            "char": "s",
+            "cursor": {
+              "line": 4,
+              "col": 7
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 51358.363758222076,
+          "data": {
+            "char": "e",
+            "cursor": {
+              "line": 4,
+              "col": 8
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 51423.72416439655,
+          "data": {
+            "char": ":",
+            "cursor": {
+              "line": 4,
+              "col": 9
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 51489.08457057103,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 4,
+              "col": 10
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 51554.44497674551,
+          "data": {
+            "char": "b",
+            "cursor": {
+              "line": 4,
+              "col": 11
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 51619.805382919985,
+          "data": {
+            "char": "o",
+            "cursor": {
+              "line": 4,
+              "col": 12
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 51685.16578909446,
+          "data": {
+            "char": "o",
+            "cursor": {
+              "line": 4,
+              "col": 13
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 51750.52619526894,
+          "data": {
+            "char": "l",
+            "cursor": {
+              "line": 4,
+              "col": 14
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 51815.88660144342,
+          "data": {
+            "char": "e",
+            "cursor": {
+              "line": 4,
+              "col": 15
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 51881.247007617894,
+          "data": {
+            "char": "a",
+            "cursor": {
+              "line": 4,
+              "col": 16
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 51946.60741379237,
+          "data": {
+            "char": "n",
+            "cursor": {
+              "line": 4,
+              "col": 17
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 52011.96781996685,
+          "data": {
+            "char": ";",
+            "cursor": {
+              "line": 4,
+              "col": 18
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 52077.328226141326,
+          "data": {
+            "char": "\n",
+            "cursor": {
+              "line": 4,
+              "col": 19
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 52277.328226141326,
+          "data": {
+            "char": "}",
+            "cursor": {
+              "line": 5,
+              "col": 0
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 52366.80666355435,
+          "data": {
+            "char": "\n",
+            "cursor": {
+              "line": 5,
+              "col": 1
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 52566.80666355435,
+          "data": {
+            "char": "\n",
+            "cursor": {
+              "line": 6,
+              "col": 0
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 52766.80666355435,
+          "data": {
+            "char": "c",
+            "cursor": {
+              "line": 7,
+              "col": 0
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 52847.651619103846,
+          "data": {
+            "char": "l",
+            "cursor": {
+              "line": 7,
+              "col": 1
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 52928.49657465334,
+          "data": {
+            "char": "a",
+            "cursor": {
+              "line": 7,
+              "col": 2
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 53009.34153020284,
+          "data": {
+            "char": "s",
+            "cursor": {
+              "line": 7,
+              "col": 3
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 53090.18648575233,
+          "data": {
+            "char": "s",
+            "cursor": {
+              "line": 7,
+              "col": 4
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 53171.03144130183,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 7,
+              "col": 5
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 53251.87639685132,
+          "data": {
+            "char": "A",
+            "cursor": {
+              "line": 7,
+              "col": 6
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 53332.72135240082,
+          "data": {
+            "char": "p",
+            "cursor": {
+              "line": 7,
+              "col": 7
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 53413.566307950314,
+          "data": {
+            "char": "p",
+            "cursor": {
+              "line": 7,
+              "col": 8
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 53494.41126349981,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 7,
+              "col": 9
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 53575.256219049304,
+          "data": {
+            "char": "{",
+            "cursor": {
+              "line": 7,
+              "col": 10
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 53656.1011745988,
+          "data": {
+            "char": "\n",
+            "cursor": {
+              "line": 7,
+              "col": 11
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 53856.1011745988,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 8,
+              "col": 0
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 53940.42531337076,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 8,
+              "col": 1
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 54024.74945214272,
+          "data": {
+            "char": "c",
+            "cursor": {
+              "line": 8,
+              "col": 2
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 54109.07359091468,
+          "data": {
+            "char": "o",
+            "cursor": {
+              "line": 8,
+              "col": 3
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 54193.39772968664,
+          "data": {
+            "char": "n",
+            "cursor": {
+              "line": 8,
+              "col": 4
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 54277.721868458604,
+          "data": {
+            "char": "s",
+            "cursor": {
+              "line": 8,
+              "col": 5
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 54362.046007230565,
+          "data": {
+            "char": "t",
+            "cursor": {
+              "line": 8,
+              "col": 6
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 54446.370146002526,
+          "data": {
+            "char": "r",
+            "cursor": {
+              "line": 8,
+              "col": 7
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 54530.69428477449,
+          "data": {
+            "char": "u",
+            "cursor": {
+              "line": 8,
+              "col": 8
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 54615.01842354645,
+          "data": {
+            "char": "c",
+            "cursor": {
+              "line": 8,
+              "col": 9
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 54699.34256231841,
+          "data": {
+            "char": "t",
+            "cursor": {
+              "line": 8,
+              "col": 10
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 54783.66670109037,
+          "data": {
+            "char": "o",
+            "cursor": {
+              "line": 8,
+              "col": 11
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 54867.99083986233,
+          "data": {
+            "char": "r",
+            "cursor": {
+              "line": 8,
+              "col": 12
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 54952.31497863429,
+          "data": {
+            "char": "(",
+            "cursor": {
+              "line": 8,
+              "col": 13
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 55036.63911740625,
+          "data": {
+            "char": "p",
+            "cursor": {
+              "line": 8,
+              "col": 14
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 55120.96325617821,
+          "data": {
+            "char": "r",
+            "cursor": {
+              "line": 8,
+              "col": 15
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 55205.28739495017,
+          "data": {
+            "char": "i",
+            "cursor": {
+              "line": 8,
+              "col": 16
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 55289.611533722134,
+          "data": {
+            "char": "v",
+            "cursor": {
+              "line": 8,
+              "col": 17
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 55373.935672494095,
+          "data": {
+            "char": "a",
+            "cursor": {
+              "line": 8,
+              "col": 18
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 55458.259811266056,
+          "data": {
+            "char": "t",
+            "cursor": {
+              "line": 8,
+              "col": 19
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 55542.58395003802,
+          "data": {
+            "char": "e",
+            "cursor": {
+              "line": 8,
+              "col": 20
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 55626.90808880998,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 8,
+              "col": 21
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 55711.23222758194,
+          "data": {
+            "char": "c",
+            "cursor": {
+              "line": 8,
+              "col": 22
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 55795.5563663539,
+          "data": {
+            "char": "o",
+            "cursor": {
+              "line": 8,
+              "col": 23
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 55879.88050512586,
+          "data": {
+            "char": "n",
+            "cursor": {
+              "line": 8,
+              "col": 24
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 55964.20464389782,
+          "data": {
+            "char": "f",
+            "cursor": {
+              "line": 8,
+              "col": 25
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 56048.52878266978,
+          "data": {
+            "char": "i",
+            "cursor": {
+              "line": 8,
+              "col": 26
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 56132.85292144174,
+          "data": {
+            "char": "g",
+            "cursor": {
+              "line": 8,
+              "col": 27
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 56217.177060213704,
+          "data": {
+            "char": ":",
+            "cursor": {
+              "line": 8,
+              "col": 28
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 56301.501198985665,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 8,
+              "col": 29
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 56385.825337757626,
+          "data": {
+            "char": "C",
+            "cursor": {
+              "line": 8,
+              "col": 30
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 56470.14947652959,
+          "data": {
+            "char": "o",
+            "cursor": {
+              "line": 8,
+              "col": 31
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 56554.47361530155,
+          "data": {
+            "char": "n",
+            "cursor": {
+              "line": 8,
+              "col": 32
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 56638.79775407351,
+          "data": {
+            "char": "f",
+            "cursor": {
+              "line": 8,
+              "col": 33
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 56723.12189284547,
+          "data": {
+            "char": "i",
+            "cursor": {
+              "line": 8,
+              "col": 34
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 56807.44603161743,
+          "data": {
+            "char": "g",
+            "cursor": {
+              "line": 8,
+              "col": 35
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 56891.77017038939,
+          "data": {
+            "char": ")",
+            "cursor": {
+              "line": 8,
+              "col": 36
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 56976.09430916135,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 8,
+              "col": 37
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 57060.41844793331,
+          "data": {
+            "char": "{",
+            "cursor": {
+              "line": 8,
+              "col": 38
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 57144.74258670527,
+          "data": {
+            "char": "}",
+            "cursor": {
+              "line": 8,
+              "col": 39
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 57229.066725477234,
+          "data": {
+            "char": "\n",
+            "cursor": {
+              "line": 8,
+              "col": 40
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 57429.066725477234,
+          "data": {
+            "char": "\n",
+            "cursor": {
+              "line": 9,
+              "col": 0
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 57629.066725477234,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 10,
+              "col": 0
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 57717.213058088884,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 10,
+              "col": 1
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 57805.359390700534,
+          "data": {
+            "char": "r",
+            "cursor": {
+              "line": 10,
+              "col": 2
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 57893.505723312184,
+          "data": {
+            "char": "u",
+            "cursor": {
+              "line": 10,
+              "col": 3
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 57981.652055923834,
+          "data": {
+            "char": "n",
+            "cursor": {
+              "line": 10,
+              "col": 4
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 58069.798388535484,
+          "data": {
+            "char": "(",
+            "cursor": {
+              "line": 10,
+              "col": 5
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 58157.944721147134,
+          "data": {
+            "char": ")",
+            "cursor": {
+              "line": 10,
+              "col": 6
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 58246.091053758784,
+          "data": {
+            "char": ":",
+            "cursor": {
+              "line": 10,
+              "col": 7
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 58334.237386370434,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 10,
+              "col": 8
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 58422.383718982084,
+          "data": {
+            "char": "v",
+            "cursor": {
+              "line": 10,
+              "col": 9
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 58510.530051593734,
+          "data": {
+            "char": "o",
+            "cursor": {
+              "line": 10,
+              "col": 10
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 58598.676384205384,
+          "data": {
+            "char": "i",
+            "cursor": {
+              "line": 10,
+              "col": 11
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 58686.822716817034,
+          "data": {
+            "char": "d",
+            "cursor": {
+              "line": 10,
+              "col": 12
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 58774.969049428684,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 10,
+              "col": 13
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 58863.115382040334,
+          "data": {
+            "char": "{",
+            "cursor": {
+              "line": 10,
+              "col": 14
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 58951.261714651984,
+          "data": {
+            "char": "\n",
+            "cursor": {
+              "line": 10,
+              "col": 15
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 59151.261714651984,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 11,
+              "col": 0
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 59242.618065670846,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 11,
+              "col": 1
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 59333.97441668971,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 11,
+              "col": 2
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 59425.33076770857,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 11,
+              "col": 3
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 59516.68711872743,
+          "data": {
+            "char": "i",
+            "cursor": {
+              "line": 11,
+              "col": 4
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 59608.04346974629,
+          "data": {
+            "char": "f",
+            "cursor": {
+              "line": 11,
+              "col": 5
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 59699.39982076515,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 11,
+              "col": 6
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 59790.756171784014,
+          "data": {
+            "char": "(",
+            "cursor": {
+              "line": 11,
+              "col": 7
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 59882.112522802876,
+          "data": {
+            "char": "t",
+            "cursor": {
+              "line": 11,
+              "col": 8
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 59973.46887382174,
+          "data": {
+            "char": "h",
+            "cursor": {
+              "line": 11,
+              "col": 9
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 60064.8252248406,
+          "data": {
+            "char": "i",
+            "cursor": {
+              "line": 11,
+              "col": 10
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 60156.18157585946,
+          "data": {
+            "char": "s",
+            "cursor": {
+              "line": 11,
+              "col": 11
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 60247.53792687832,
+          "data": {
+            "char": ".",
+            "cursor": {
+              "line": 11,
+              "col": 12
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 60338.89427789718,
+          "data": {
+            "char": "c",
+            "cursor": {
+              "line": 11,
+              "col": 13
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 60430.250628916045,
+          "data": {
+            "char": "o",
+            "cursor": {
+              "line": 11,
+              "col": 14
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 60521.606979934906,
+          "data": {
+            "char": "n",
+            "cursor": {
+              "line": 11,
+              "col": 15
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 60612.96333095377,
+          "data": {
+            "char": "f",
+            "cursor": {
+              "line": 11,
+              "col": 16
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 60704.31968197263,
+          "data": {
+            "char": "i",
+            "cursor": {
+              "line": 11,
+              "col": 17
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 60795.67603299149,
+          "data": {
+            "char": "g",
+            "cursor": {
+              "line": 11,
+              "col": 18
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 60887.03238401035,
+          "data": {
+            "char": ".",
+            "cursor": {
+              "line": 11,
+              "col": 19
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 60978.38873502921,
+          "data": {
+            "char": "v",
+            "cursor": {
+              "line": 11,
+              "col": 20
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 61069.745086048075,
+          "data": {
+            "char": "e",
+            "cursor": {
+              "line": 11,
+              "col": 21
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 61161.101437066936,
+          "data": {
+            "char": "r",
+            "cursor": {
+              "line": 11,
+              "col": 22
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 61252.4577880858,
+          "data": {
+            "char": "b",
+            "cursor": {
+              "line": 11,
+              "col": 23
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 61343.81413910466,
+          "data": {
+            "char": "o",
+            "cursor": {
+              "line": 11,
+              "col": 24
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 61435.17049012352,
+          "data": {
+            "char": "s",
+            "cursor": {
+              "line": 11,
+              "col": 25
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 61526.52684114238,
+          "data": {
+            "char": "e",
+            "cursor": {
+              "line": 11,
+              "col": 26
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 61617.883192161244,
+          "data": {
+            "char": ")",
+            "cursor": {
+              "line": 11,
+              "col": 27
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 61709.239543180105,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 11,
+              "col": 28
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 61800.59589419897,
+          "data": {
+            "char": "{",
+            "cursor": {
+              "line": 11,
+              "col": 29
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 61891.95224521783,
+          "data": {
+            "char": "\n",
+            "cursor": {
+              "line": 11,
+              "col": 30
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 62091.95224521783,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 12,
+              "col": 0
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 62148.74094474679,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 12,
+              "col": 1
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 62205.529644275746,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 12,
+              "col": 2
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 62262.318343804705,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 12,
+              "col": 3
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 62319.107043333664,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 12,
+              "col": 4
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 62375.89574286262,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 12,
+              "col": 5
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 62432.68444239158,
+          "data": {
+            "char": "c",
+            "cursor": {
+              "line": 12,
+              "col": 6
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 62489.47314192054,
+          "data": {
+            "char": "o",
+            "cursor": {
+              "line": 12,
+              "col": 7
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 62546.2618414495,
+          "data": {
+            "char": "n",
+            "cursor": {
+              "line": 12,
+              "col": 8
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 62603.05054097846,
+          "data": {
+            "char": "s",
+            "cursor": {
+              "line": 12,
+              "col": 9
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 62659.83924050742,
+          "data": {
+            "char": "o",
+            "cursor": {
+              "line": 12,
+              "col": 10
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 62716.62794003638,
+          "data": {
+            "char": "l",
+            "cursor": {
+              "line": 12,
+              "col": 11
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 62773.41663956534,
+          "data": {
+            "char": "e",
+            "cursor": {
+              "line": 12,
+              "col": 12
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 62830.2053390943,
+          "data": {
+            "char": ".",
+            "cursor": {
+              "line": 12,
+              "col": 13
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 62886.994038623256,
+          "data": {
+            "char": "l",
+            "cursor": {
+              "line": 12,
+              "col": 14
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 62943.782738152215,
+          "data": {
+            "char": "o",
+            "cursor": {
+              "line": 12,
+              "col": 15
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 63000.571437681174,
+          "data": {
+            "char": "g",
+            "cursor": {
+              "line": 12,
+              "col": 16
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 63057.36013721013,
+          "data": {
+            "char": "(",
+            "cursor": {
+              "line": 12,
+              "col": 17
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 63114.14883673909,
+          "data": {
+            "char": "`",
+            "cursor": {
+              "line": 12,
+              "col": 18
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 63170.93753626805,
+          "data": {
+            "char": "S",
+            "cursor": {
+              "line": 12,
+              "col": 19
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 63227.72623579701,
+          "data": {
+            "char": "t",
+            "cursor": {
+              "line": 12,
+              "col": 20
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 63284.51493532597,
+          "data": {
+            "char": "a",
+            "cursor": {
+              "line": 12,
+              "col": 21
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 63341.30363485493,
+          "data": {
+            "char": "r",
+            "cursor": {
+              "line": 12,
+              "col": 22
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 63398.09233438389,
+          "data": {
+            "char": "t",
+            "cursor": {
+              "line": 12,
+              "col": 23
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 63454.88103391285,
+          "data": {
+            "char": "i",
+            "cursor": {
+              "line": 12,
+              "col": 24
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 63511.669733441806,
+          "data": {
+            "char": "n",
+            "cursor": {
+              "line": 12,
+              "col": 25
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 63568.458432970765,
+          "data": {
+            "char": "g",
+            "cursor": {
+              "line": 12,
+              "col": 26
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 63625.247132499724,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 12,
+              "col": 27
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 63682.03583202868,
+          "data": {
+            "char": "$",
+            "cursor": {
+              "line": 12,
+              "col": 28
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 63738.82453155764,
+          "data": {
+            "char": "{",
+            "cursor": {
+              "line": 12,
+              "col": 29
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 63795.6132310866,
+          "data": {
+            "char": "t",
+            "cursor": {
+              "line": 12,
+              "col": 30
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 63852.40193061556,
+          "data": {
+            "char": "h",
+            "cursor": {
+              "line": 12,
+              "col": 31
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 63909.19063014452,
+          "data": {
+            "char": "i",
+            "cursor": {
+              "line": 12,
+              "col": 32
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 63965.97932967348,
+          "data": {
+            "char": "s",
+            "cursor": {
+              "line": 12,
+              "col": 33
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 64022.76802920244,
+          "data": {
+            "char": ".",
+            "cursor": {
+              "line": 12,
+              "col": 34
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 64079.5567287314,
+          "data": {
+            "char": "c",
+            "cursor": {
+              "line": 12,
+              "col": 35
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 64136.345428260356,
+          "data": {
+            "char": "o",
+            "cursor": {
+              "line": 12,
+              "col": 36
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 64193.134127789315,
+          "data": {
+            "char": "n",
+            "cursor": {
+              "line": 12,
+              "col": 37
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 64249.922827318274,
+          "data": {
+            "char": "f",
+            "cursor": {
+              "line": 12,
+              "col": 38
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 64306.71152684723,
+          "data": {
+            "char": "i",
+            "cursor": {
+              "line": 12,
+              "col": 39
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 64363.50022637619,
+          "data": {
+            "char": "g",
+            "cursor": {
+              "line": 12,
+              "col": 40
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 64420.28892590515,
+          "data": {
+            "char": ".",
+            "cursor": {
+              "line": 12,
+              "col": 41
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 64477.07762543411,
+          "data": {
+            "char": "n",
+            "cursor": {
+              "line": 12,
+              "col": 42
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 64533.86632496307,
+          "data": {
+            "char": "a",
+            "cursor": {
+              "line": 12,
+              "col": 43
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 64590.65502449203,
+          "data": {
+            "char": "m",
+            "cursor": {
+              "line": 12,
+              "col": 44
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 64647.44372402099,
+          "data": {
+            "char": "e",
+            "cursor": {
+              "line": 12,
+              "col": 45
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 64704.23242354995,
+          "data": {
+            "char": "}",
+            "cursor": {
+              "line": 12,
+              "col": 46
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 64761.02112307891,
+          "data": {
+            "char": ".",
+            "cursor": {
+              "line": 12,
+              "col": 47
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 64817.809822607865,
+          "data": {
+            "char": ".",
+            "cursor": {
+              "line": 12,
+              "col": 48
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 64874.598522136825,
+          "data": {
+            "char": ".",
+            "cursor": {
+              "line": 12,
+              "col": 49
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 64931.387221665784,
+          "data": {
+            "char": "`",
+            "cursor": {
+              "line": 12,
+              "col": 50
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 64988.17592119474,
+          "data": {
+            "char": ")",
+            "cursor": {
+              "line": 12,
+              "col": 51
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 65044.9646207237,
+          "data": {
+            "char": ";",
+            "cursor": {
+              "line": 12,
+              "col": 52
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 65101.75332025266,
+          "data": {
+            "char": "\n",
+            "cursor": {
+              "line": 12,
+              "col": 53
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 65301.75332025266,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 13,
+              "col": 0
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 65377.12640747055,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 13,
+              "col": 1
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 65452.49949468843,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 13,
+              "col": 2
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 65527.87258190632,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 13,
+              "col": 3
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 65603.2456691242,
+          "data": {
+            "char": "}",
+            "cursor": {
+              "line": 13,
+              "col": 4
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 65678.61875634208,
+          "data": {
+            "char": "\n",
+            "cursor": {
+              "line": 13,
+              "col": 5
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 65878.61875634208,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 14,
+              "col": 0
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 65935.8916859937,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 14,
+              "col": 1
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 65993.16461564532,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 14,
+              "col": 2
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 66050.43754529694,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 14,
+              "col": 3
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 66107.71047494856,
+          "data": {
+            "char": "/",
+            "cursor": {
+              "line": 14,
+              "col": 4
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 66164.98340460018,
+          "data": {
+            "char": "/",
+            "cursor": {
+              "line": 14,
+              "col": 5
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 66222.2563342518,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 14,
+              "col": 6
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 66279.52926390342,
+          "data": {
+            "char": "Y",
+            "cursor": {
+              "line": 14,
+              "col": 7
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 66336.80219355504,
+          "data": {
+            "char": "o",
+            "cursor": {
+              "line": 14,
+              "col": 8
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 66394.07512320665,
+          "data": {
+            "char": "u",
+            "cursor": {
+              "line": 14,
+              "col": 9
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 66451.34805285827,
+          "data": {
+            "char": "r",
+            "cursor": {
+              "line": 14,
+              "col": 10
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 66508.62098250989,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 14,
+              "col": 11
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 66565.89391216151,
+          "data": {
+            "char": "c",
+            "cursor": {
+              "line": 14,
+              "col": 12
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 66623.16684181313,
+          "data": {
+            "char": "o",
+            "cursor": {
+              "line": 14,
+              "col": 13
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 66680.43977146475,
+          "data": {
+            "char": "d",
+            "cursor": {
+              "line": 14,
+              "col": 14
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 66737.71270111637,
+          "data": {
+            "char": "e",
+            "cursor": {
+              "line": 14,
+              "col": 15
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 66794.98563076799,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 14,
+              "col": 16
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 66852.2585604196,
+          "data": {
+            "char": "h",
+            "cursor": {
+              "line": 14,
+              "col": 17
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 66909.53149007123,
+          "data": {
+            "char": "e",
+            "cursor": {
+              "line": 14,
+              "col": 18
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 66966.80441972284,
+          "data": {
+            "char": "r",
+            "cursor": {
+              "line": 14,
+              "col": 19
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 67024.07734937446,
+          "data": {
+            "char": "e",
+            "cursor": {
+              "line": 14,
+              "col": 20
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 67081.35027902608,
+          "data": {
+            "char": "\n",
+            "cursor": {
+              "line": 14,
+              "col": 21
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 67281.35027902608,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 15,
+              "col": 0
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 67347.88818148537,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 15,
+              "col": 1
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 67414.42608394465,
+          "data": {
+            "char": "}",
+            "cursor": {
+              "line": 15,
+              "col": 2
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 67480.96398640393,
+          "data": {
+            "char": "\n",
+            "cursor": {
+              "line": 15,
+              "col": 3
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 67680.96398640393,
+          "data": {
+            "char": "}",
+            "cursor": {
+              "line": 16,
+              "col": 0
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 67755.78630261394,
+          "data": {
+            "char": "\n",
+            "cursor": {
+              "line": 16,
+              "col": 1
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 67955.78630261394,
+          "data": {
+            "char": "\n",
+            "cursor": {
+              "line": 17,
+              "col": 0
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 68155.78630261394,
+          "data": {
+            "char": "c",
+            "cursor": {
+              "line": 18,
+              "col": 0
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 68239.62700445815,
+          "data": {
+            "char": "o",
+            "cursor": {
+              "line": 18,
+              "col": 1
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 68323.46770630236,
+          "data": {
+            "char": "n",
+            "cursor": {
+              "line": 18,
+              "col": 2
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 68407.30840814656,
+          "data": {
+            "char": "s",
+            "cursor": {
+              "line": 18,
+              "col": 3
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 68491.14910999077,
+          "data": {
+            "char": "t",
+            "cursor": {
+              "line": 18,
+              "col": 4
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 68574.98981183498,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 18,
+              "col": 5
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 68658.83051367919,
+          "data": {
+            "char": "a",
+            "cursor": {
+              "line": 18,
+              "col": 6
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 68742.6712155234,
+          "data": {
+            "char": "p",
+            "cursor": {
+              "line": 18,
+              "col": 7
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 68826.5119173676,
+          "data": {
+            "char": "p",
+            "cursor": {
+              "line": 18,
+              "col": 8
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 68910.35261921182,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 18,
+              "col": 9
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 68994.19332105602,
+          "data": {
+            "char": "=",
+            "cursor": {
+              "line": 18,
+              "col": 10
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 69078.03402290023,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 18,
+              "col": 11
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 69161.87472474444,
+          "data": {
+            "char": "n",
+            "cursor": {
+              "line": 18,
+              "col": 12
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 69245.71542658865,
+          "data": {
+            "char": "e",
+            "cursor": {
+              "line": 18,
+              "col": 13
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 69329.55612843286,
+          "data": {
+            "char": "w",
+            "cursor": {
+              "line": 18,
+              "col": 14
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 69413.39683027707,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 18,
+              "col": 15
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 69497.23753212127,
+          "data": {
+            "char": "A",
+            "cursor": {
+              "line": 18,
+              "col": 16
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 69581.07823396548,
+          "data": {
+            "char": "p",
+            "cursor": {
+              "line": 18,
+              "col": 17
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 69664.91893580969,
+          "data": {
+            "char": "p",
+            "cursor": {
+              "line": 18,
+              "col": 18
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 69748.7596376539,
+          "data": {
+            "char": "(",
+            "cursor": {
+              "line": 18,
+              "col": 19
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 69832.60033949811,
+          "data": {
+            "char": "{",
+            "cursor": {
+              "line": 18,
+              "col": 20
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 69916.44104134232,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 18,
+              "col": 21
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 70000.28174318653,
+          "data": {
+            "char": "n",
+            "cursor": {
+              "line": 18,
+              "col": 22
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 70084.12244503073,
+          "data": {
+            "char": "a",
+            "cursor": {
+              "line": 18,
+              "col": 23
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 70167.96314687494,
+          "data": {
+            "char": "m",
+            "cursor": {
+              "line": 18,
+              "col": 24
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 70251.80384871915,
+          "data": {
+            "char": "e",
+            "cursor": {
+              "line": 18,
+              "col": 25
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 70335.64455056336,
+          "data": {
+            "char": ":",
+            "cursor": {
+              "line": 18,
+              "col": 26
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 70419.48525240757,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 18,
+              "col": 27
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 70503.32595425178,
+          "data": {
+            "char": "\"",
+            "cursor": {
+              "line": 18,
+              "col": 28
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 70587.16665609599,
+          "data": {
+            "char": "T",
+            "cursor": {
+              "line": 18,
+              "col": 29
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 70671.0073579402,
+          "data": {
+            "char": "y",
+            "cursor": {
+              "line": 18,
+              "col": 30
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 70754.8480597844,
+          "data": {
+            "char": "p",
+            "cursor": {
+              "line": 18,
+              "col": 31
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 70838.68876162861,
+          "data": {
+            "char": "e",
+            "cursor": {
+              "line": 18,
+              "col": 32
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 70922.52946347282,
+          "data": {
+            "char": "S",
+            "cursor": {
+              "line": 18,
+              "col": 33
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 71006.37016531703,
+          "data": {
+            "char": "c",
+            "cursor": {
+              "line": 18,
+              "col": 34
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 71090.21086716124,
+          "data": {
+            "char": "r",
+            "cursor": {
+              "line": 18,
+              "col": 35
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 71174.05156900545,
+          "data": {
+            "char": "i",
+            "cursor": {
+              "line": 18,
+              "col": 36
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 71257.89227084965,
+          "data": {
+            "char": "p",
+            "cursor": {
+              "line": 18,
+              "col": 37
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 71341.73297269386,
+          "data": {
+            "char": "t",
+            "cursor": {
+              "line": 18,
+              "col": 38
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 71425.57367453807,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 18,
+              "col": 39
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 71509.41437638228,
+          "data": {
+            "char": "A",
+            "cursor": {
+              "line": 18,
+              "col": 40
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 71593.25507822649,
+          "data": {
+            "char": "p",
+            "cursor": {
+              "line": 18,
+              "col": 41
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 71677.0957800707,
+          "data": {
+            "char": "p",
+            "cursor": {
+              "line": 18,
+              "col": 42
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 71760.9364819149,
+          "data": {
+            "char": "\"",
+            "cursor": {
+              "line": 18,
+              "col": 43
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 71844.77718375911,
+          "data": {
+            "char": ",",
+            "cursor": {
+              "line": 18,
+              "col": 44
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 71928.61788560332,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 18,
+              "col": 45
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 72012.45858744753,
+          "data": {
+            "char": "v",
+            "cursor": {
+              "line": 18,
+              "col": 46
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 72096.29928929174,
+          "data": {
+            "char": "e",
+            "cursor": {
+              "line": 18,
+              "col": 47
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 72180.13999113595,
+          "data": {
+            "char": "r",
+            "cursor": {
+              "line": 18,
+              "col": 48
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 72263.98069298016,
+          "data": {
+            "char": "b",
+            "cursor": {
+              "line": 18,
+              "col": 49
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 72347.82139482436,
+          "data": {
+            "char": "o",
+            "cursor": {
+              "line": 18,
+              "col": 50
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 72431.66209666857,
+          "data": {
+            "char": "s",
+            "cursor": {
+              "line": 18,
+              "col": 51
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 72515.50279851278,
+          "data": {
+            "char": "e",
+            "cursor": {
+              "line": 18,
+              "col": 52
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 72599.34350035699,
+          "data": {
+            "char": ":",
+            "cursor": {
+              "line": 18,
+              "col": 53
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 72683.1842022012,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 18,
+              "col": 54
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 72767.02490404541,
+          "data": {
+            "char": "t",
+            "cursor": {
+              "line": 18,
+              "col": 55
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 72850.86560588962,
+          "data": {
+            "char": "r",
+            "cursor": {
+              "line": 18,
+              "col": 56
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 72934.70630773382,
+          "data": {
+            "char": "u",
+            "cursor": {
+              "line": 18,
+              "col": 57
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 73018.54700957803,
+          "data": {
+            "char": "e",
+            "cursor": {
+              "line": 18,
+              "col": 58
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 73102.38771142224,
+          "data": {
+            "char": " ",
+            "cursor": {
+              "line": 18,
+              "col": 59
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 73186.22841326645,
+          "data": {
+            "char": "}",
+            "cursor": {
+              "line": 18,
+              "col": 60
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 73270.06911511066,
+          "data": {
+            "char": ")",
+            "cursor": {
+              "line": 18,
+              "col": 61
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 73353.90981695487,
+          "data": {
+            "char": ";",
+            "cursor": {
+              "line": 18,
+              "col": 62
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 73437.75051879908,
+          "data": {
+            "char": "\n",
+            "cursor": {
+              "line": 18,
+              "col": 63
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 73637.75051879908,
+          "data": {
+            "char": "a",
+            "cursor": {
+              "line": 19,
+              "col": 0
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 73694.30071794958,
+          "data": {
+            "char": "p",
+            "cursor": {
+              "line": 19,
+              "col": 1
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 73750.85091710008,
+          "data": {
+            "char": "p",
+            "cursor": {
+              "line": 19,
+              "col": 2
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 73807.40111625058,
+          "data": {
+            "char": ".",
+            "cursor": {
+              "line": 19,
+              "col": 3
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 73863.95131540108,
+          "data": {
+            "char": "r",
+            "cursor": {
+              "line": 19,
+              "col": 4
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 73920.50151455158,
+          "data": {
+            "char": "u",
+            "cursor": {
+              "line": 19,
+              "col": 5
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 73977.05171370208,
+          "data": {
+            "char": "n",
+            "cursor": {
+              "line": 19,
+              "col": 6
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 74033.60191285258,
+          "data": {
+            "char": "(",
+            "cursor": {
+              "line": 19,
+              "col": 7
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 74090.15211200308,
+          "data": {
+            "char": ")",
+            "cursor": {
+              "line": 19,
+              "col": 8
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 74146.70231115358,
+          "data": {
+            "char": ";",
+            "cursor": {
+              "line": 19,
+              "col": 9
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "TYPE",
+          "timestamp": 74203.25251030408,
+          "data": {
+            "char": "\n",
+            "cursor": {
+              "line": 19,
+              "col": 10
+            },
+            "language": "typescript"
+          }
+        },
+        {
+          "type": "CHECKPOINT",
+          "timestamp": 75203.25251030408,
+          "data": {
+            "label": "Class Exercise",
+            "description": "Complete the exercise: extend App with task management"
+          }
+        }
+      ],
+      "codeExamples": [
+        {
+          "filename": "main.ts",
+          "language": "typescript",
+          "code": "// Introduction to TypeScript - TypeScript\n// Example 1: Getting started\n\nfunction greet(name: string): string {\n  return `Hello, ${name}! Welcome to TypeScript.`;\n}\n\nconsole.log(greet(\"World\"));\n// Output: Hello, World! Welcome to TypeScript.",
+          "explanation": "This example demonstrates the basic structure of a TypeScript program. We define a typed function 'greet' that takes a string parameter and returns a greeting. The backtick template literal allows embedding expressions inside strings using ${}."
+        },
+        {
+          "filename": "advanced.ts",
+          "language": "typescript",
+          "code": "// Example 2: Building on the basics\n\ninterface Config {\n  name: string;\n  verbose: boolean;\n}\n\nclass App {\n  constructor(private config: Config) {}\n\n  run(): void {\n    if (this.config.verbose) {\n      console.log(`Starting ${this.config.name}...`);\n    }\n    // Your code here\n  }\n}\n\nconst app = new App({ name: \"TypeScript App\", verbose: true });\napp.run();",
+          "explanation": "Here we introduce interfaces and classes — core OOP concepts. The Config interface defines the shape of our configuration object. The App class uses a constructor with TypeScript's shorthand property declaration (private config: Config) to automatically create and assign a class property."
+        }
+      ],
+      "narrationSegments": [
+        {
+          "text": "Alright, welcome to Introduction to TypeScript. In this lesson we're going to get hands-on with TypeScript. By the end you'll have a solid understanding of the core concepts, and you'll have written some real code.",
+          "startTimestampMs": 0,
+          "endTimestampMs": 12000
+        },
+        {
+          "text": "Let's start simple. Here's your first TypeScript program. Don't worry if it looks unfamiliar — we'll break down every single line.",
+          "startTimestampMs": 12000,
+          "endTimestampMs": 22000
+        },
+        {
+          "text": "Now let's level it up a notch. We'll add some structure using interfaces and classes. This is how real TypeScript code looks in production.",
+          "startTimestampMs": 45000,
+          "endTimestampMs": 57000
+        },
+        {
+          "text": "Excellent work! You've just built a working TypeScript structure. Take a moment to experiment — change the values, break things intentionally, and see what happens. That's how you really learn.",
+          "startTimestampMs": 90000,
+          "endTimestampMs": 104000
+        }
+      ]
+    },
+    {
+      "lessonIndex": 1,
+      "title": "Core Concepts & Syntax",
+      "objective": "Master the fundamental syntax and core concepts of TypeScript",
+      "durationSec": 88,
+      "codeExamplesCount": 2,
+      "exercisesCount": 1,
+      "checkpointsCount": 2,
+      "audioSegmentsCount": 4,
+      "typeEventsCount": 601,
+      "totalEventsCount": 607
+    },
+    {
+      "lessonIndex": 2,
+      "title": "Functions & Modularity",
+      "objective": "Write reusable, modular code using functions and modules",
+      "durationSec": 87,
+      "codeExamplesCount": 2,
+      "exercisesCount": 1,
+      "checkpointsCount": 2,
+      "audioSegmentsCount": 4,
+      "typeEventsCount": 601,
+      "totalEventsCount": 607
+    }
+  ],
+  "pipeline": {
+    "curriculumGenerated": true,
+    "lessonsGenerated": 3,
+    "audioSynthesized": true,
+    "eventsAssembled": true
+  }
+}

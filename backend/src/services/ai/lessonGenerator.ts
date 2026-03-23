@@ -35,6 +35,12 @@ async function callLessonLLM(prompt: string): Promise<string> {
   }
 
   if (provider === 'openai') {
+    if (!process.env.AI_API_KEY) {
+      throw new Error(
+        'AI_PROVIDER is set to "openai" but AI_API_KEY is missing. ' +
+        'Add your OpenAI API key to .env, or set AI_PROVIDER="mock" to run without a key.'
+      );
+    }
     const res = await fetch(process.env.AI_BASE_URL || 'https://api.openai.com/v1/chat/completions', {
       method: 'POST',
       headers: {
@@ -57,6 +63,12 @@ async function callLessonLLM(prompt: string): Promise<string> {
   }
 
   if (provider === 'anthropic') {
+    if (!process.env.AI_API_KEY) {
+      throw new Error(
+        'AI_PROVIDER is set to "anthropic" but AI_API_KEY is missing. ' +
+        'Add your Anthropic API key to .env, or set AI_PROVIDER="mock" to run without a key.'
+      );
+    }
     const res = await fetch(process.env.AI_BASE_URL || 'https://api.anthropic.com/v1/messages', {
       method: 'POST',
       headers: {
@@ -148,16 +160,17 @@ function buildTypeEvents(code: string, startMs: number, language: string): Recor
   let cursor = startMs;
   const lines = code.split('\n');
 
-  for (const line of lines) {
+  for (let lineIndex = 0; lineIndex < lines.length; lineIndex++) {
+    const line = lines[lineIndex];
     // Simulate typing each line character by character
     const lineDelay = 40 + Math.random() * 60; // 40-100ms per char
-    for (let i = 0; i < line.length; i++) {
+    for (let col = 0; col < line.length; col++) {
       events.push({
         type: 'TYPE',
         timestamp: cursor,
         data: {
-          char: line[i],
-          cursor: { line: lines.indexOf(line), col: i },
+          char: line[col],
+          cursor: { line: lineIndex, col },
           language,
         },
       });
@@ -167,7 +180,7 @@ function buildTypeEvents(code: string, startMs: number, language: string): Recor
     events.push({
       type: 'TYPE',
       timestamp: cursor,
-      data: { char: '\n', cursor: { line: lines.indexOf(line), col: line.length }, language },
+      data: { char: '\n', cursor: { line: lineIndex, col: line.length }, language },
     });
     cursor += 200; // pause between lines
   }
